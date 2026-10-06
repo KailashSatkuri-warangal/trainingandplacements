@@ -5,8 +5,12 @@ import { DEMO_DRIVES } from "../data/demoData";
 function getLocalDrives() {
   try {
     const raw = localStorage.getItem("tp_demo_drives");
-    if (raw) return JSON.parse(raw);
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed) && parsed.length >= 10) return parsed;
+    }
   } catch (e) {}
+  saveLocalDrives(DEMO_DRIVES);
   return DEMO_DRIVES;
 }
 
@@ -159,7 +163,7 @@ export const driveService = {
   /**
    * Fetch featured published drives
    */
-  async getFeaturedDrives(limit = 6) {
+  async getFeaturedDrives(limit = 12) {
     try {
       const { data, error } = await supabase
         .from("hiring_drives")
@@ -169,16 +173,17 @@ export const driveService = {
           category:categories(id, name, slug)
         `)
         .eq("status", "PUBLISHED")
-        .eq("featured", true)
+        .order("featured", { ascending: false })
         .order("posted_at", { ascending: false })
         .limit(limit);
 
       if (!error && data && data.length > 0) return data;
     } catch (e) {}
 
-    return getLocalDrives()
-      .filter((d) => d.status === "PUBLISHED" && d.featured)
-      .slice(0, limit);
+    const all = getLocalDrives().filter((d) => d.status === "PUBLISHED");
+    const featured = all.filter((d) => d.featured);
+    const nonFeatured = all.filter((d) => !d.featured);
+    return [...featured, ...nonFeatured].slice(0, limit);
   },
 
   /**
@@ -239,6 +244,13 @@ export const driveService = {
     return (
       getLocalDrives().find((d) => d.slug === slug || d.id === slug) || null
     );
+  },
+
+  /**
+   * ADMIN: Fetch drive by ID
+   */
+  async getAdminDriveById(id) {
+    return this.getDriveBySlug(id);
   },
 
   /**
@@ -365,6 +377,34 @@ export const driveService = {
 
     const local = getLocalDrives();
     const updated = local.map((d) => (d.id === id ? { ...d, ...driveData } : d));
+    saveLocalDrives(updated);
+    return updated.find((d) => d.id === id);
+  },
+
+  /**
+   * ADMIN: Set drive status directly (e.g. DRAFT or PUBLISHED)
+   */
+  async setStatus(id, newStatus) {
+    try {
+      const { data, error } = await supabase
+        .from("hiring_drives")
+        .update({
+          status: newStatus,
+          posted_at: newStatus === "PUBLISHED" ? new Date().toISOString() : null,
+          updated_at: new Date().toISOString()
+        })
+        .eq("id", id)
+        .select()
+        .single();
+      if (!error && data) {
+        const local = getLocalDrives();
+        saveLocalDrives(local.map((d) => (d.id === id ? { ...d, status: newStatus } : d)));
+        return data;
+      }
+    } catch (e) {}
+
+    const local = getLocalDrives();
+    const updated = local.map((d) => (d.id === id ? { ...d, status: newStatus } : d));
     saveLocalDrives(updated);
     return updated.find((d) => d.id === id);
   },

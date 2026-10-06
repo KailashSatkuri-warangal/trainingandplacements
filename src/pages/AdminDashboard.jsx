@@ -14,6 +14,7 @@ import {
   ExternalLink,
   RefreshCw,
   Smartphone,
+  Bell,
   BellRing,
   Volume2,
   VolumeX,
@@ -27,10 +28,9 @@ export default function AdminDashboard() {
   const [metrics, setMetrics] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const {
-    notifications,
-    unreadCount,
+    notifications = [],
+    unreadCount = 0,
     toggleCenter,
-    simulatePhoneNotification,
     soundEnabled,
     setSoundEnabled,
     markAsRead

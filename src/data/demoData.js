@@ -172,7 +172,7 @@ export const DEMO_DRIVES = [
       "Participate in code reviews, unit testing, and agile sprint planning.",
       "Collaborate with multinational delivery teams to ship client enhancements."
     ],
-    description: "Cognizant is conducting direct campus-to-corporate hiring drives in Hyderabad. Shortlisted candidates receive dedicated 1-on-1 interview mentoring through Sandru Anudeep to prepare for the technical coding panel.",
+    description: "Cognizant is conducting direct campus-to-corporate hiring drives in Hyderabad. Shortlisted candidates receive dedicated 1-on-1 interview mentoring through our Contact Team to prepare for the technical coding panel.",
     status: "PUBLISHED",
     featured: true,
     views: 342,
@@ -246,7 +246,7 @@ export const DEMO_DRIVES = [
     ],
     description: "Teleperformance India is recruiting candidate batches for its premier global accounts. Company provides laptop and power backup reimbursement.",
     status: "PUBLISHED",
-    featured: false,
+    featured: true,
     views: 295,
     posted_at: "2026-10-02T14:15:00Z",
     created_at: "2026-10-02T14:15:00Z"
@@ -282,7 +282,7 @@ export const DEMO_DRIVES = [
     ],
     description: "Join Concentrix's banking intelligence and risk management vertical. Accelerated appraisal cycles with direct client management exposure.",
     status: "PUBLISHED",
-    featured: false,
+    featured: true,
     views: 184,
     posted_at: "2026-10-01T16:00:00Z",
     created_at: "2026-10-01T16:00:00Z"
@@ -406,6 +406,144 @@ export const DEMO_DRIVES = [
     views: 94,
     posted_at: "2026-01-20T10:00:00Z",
     created_at: "2026-01-20T10:00:00Z"
+  },
+
+  // 9. PUBLISHED + FEATURED + Wipro Non-Voice
+  {
+    id: "drive-9",
+    title: "Wipro Freshers Non-Voice & Chat Operations Associate",
+    slug: "wipro-freshers-non-voice-associate",
+    company_id: "comp-5",
+    company: DEMO_COMPANIES[4],
+    category_id: "cat-4",
+    category: DEMO_CATEGORIES[3],
+    location: "Hyderabad (Gachibowli)",
+    work_mode: "Work From Office",
+    experience: "Freshers (2024 / 2025 / 2026 Graduates)",
+    salary_text: "₹2.75 LPA - ₹3.40 LPA",
+    salary_min: 275000,
+    salary_max: 340000,
+    shifts: "Rotational Shifts (5 Days Working, 2 Days Off)",
+    process_type: "Aptitude + Written English Test + Operations Panel",
+    skills: ["Written English", "Typing (30 WPM)", "Email Support", "MS Office"],
+    eligibility: [
+      "Any graduate (B.Com, B.Sc, BBA, BA, B.Tech passouts).",
+      "No active backlogs.",
+      "Good comprehension and typing speed."
+    ],
+    responsibilities: [
+      "Process customer emails and live chat tickets with high accuracy.",
+      "Adhere to project quality matrices and strict compliance protocols.",
+      "Ensure fast resolution times with zero escalation."
+    ],
+    description: "Wipro is conducting an exclusive walk-in hiring drive with 40+ immediate openings in Hyderabad.",
+    status: "PUBLISHED",
+    featured: true,
+    views: 480,
+    posted_at: "2026-10-04T12:00:00Z",
+    created_at: "2026-10-04T12:00:00Z"
+  },
+
+  // 10. PUBLISHED + FEATURED + Virtusa Software Engineer
+  {
+    id: "drive-10",
+    title: "Virtusa 2026 Software Engineer & Java Full Stack Drive",
+    slug: "virtusa-2026-software-engineer-java",
+    company_id: "comp-4",
+    company: DEMO_COMPANIES[3],
+    category_id: "cat-3",
+    category: DEMO_CATEGORIES[2],
+    location: "Hyderabad (Nanakramguda)",
+    work_mode: "Hybrid",
+    experience: "Freshers & 1 Year (2025 / 2026 Batches)",
+    salary_text: "₹5.00 LPA - ₹6.50 LPA",
+    salary_min: 500000,
+    salary_max: 650000,
+    shifts: "General Day Shift",
+    process_type: "Coding Assessment + Technical F2F + HR Discussion",
+    skills: ["Java", "Spring Boot", "React", "SQL", "Git", "DSA"],
+    eligibility: [
+      "B.Tech / B.E (CSE, IT, ECE) or MCA with 65% aggregate.",
+      "Hands-on coding experience in Java or Python."
+    ],
+    responsibilities: [
+      "Develop scalable web microservices and client-facing modules.",
+      "Write clean unit tests and participate in automated code deployments."
+    ],
+    description: "Accelerated software engineering program at Virtusa with confirmed client placement slots.",
+    status: "PUBLISHED",
+    featured: true,
+    views: 610,
+    posted_at: "2026-10-03T16:00:00Z",
+    created_at: "2026-10-03T16:00:00Z"
+  },
+
+  // 11. PUBLISHED + FEATURED + Deloitte Associate Analyst
+  {
+    id: "drive-11",
+    title: "Deloitte India Associate Risk & Technology Analyst",
+    slug: "deloitte-associate-analyst-drive",
+    company_id: "comp-7",
+    company: DEMO_COMPANIES[6],
+    category_id: "cat-3",
+    category: DEMO_CATEGORIES[2],
+    location: "Hyderabad (Hitec City)",
+    work_mode: "Hybrid",
+    experience: "0 - 2 Years",
+    salary_text: "₹6.00 LPA - ₹8.00 LPA",
+    salary_min: 600000,
+    salary_max: 800000,
+    shifts: "Day Shift (Mon - Fri)",
+    process_type: "Aptitude + Tech Interview + Partner Panel",
+    skills: ["Data Analysis", "Python / SQL", "Power BI", "Risk Consulting", "Excel"],
+    eligibility: [
+      "B.Tech, B.Sc Computers, B.Com Computer Applications, or MBA.",
+      "Strong analytical, presentation, and data interpretation skills."
+    ],
+    responsibilities: [
+      "Analyze enterprise data sets to evaluate IT risks and operational security.",
+      "Prepare interactive client reporting dashboards using Power BI and Excel."
+    ],
+    description: "Join Deloitte's world-class advisory practice. Exceptional career growth and fast track promotions.",
+    status: "PUBLISHED",
+    featured: true,
+    views: 740,
+    posted_at: "2026-10-02T10:00:00Z",
+    created_at: "2026-10-02T10:00:00Z"
+  },
+
+  // 12. PUBLISHED + FEATURED + R1 RCM AR Caller Lead
+  {
+    id: "drive-12",
+    title: "R1 RCM Senior AR Follow-Up & Denial Resolution Lead",
+    slug: "r1-rcm-senior-ar-caller-lead",
+    company_id: "comp-3",
+    company: DEMO_COMPANIES[2],
+    category_id: "cat-2",
+    category: DEMO_CATEGORIES[1],
+    location: "Hyderabad (Hitec City)",
+    work_mode: "Work From Office",
+    experience: "1 - 4 Years",
+    salary_text: "₹4.80 LPA - ₹6.20 LPA + Performance Bonus",
+    salary_min: 480000,
+    salary_max: 620000,
+    shifts: "US Night Shift (Fixed Weekends Off)",
+    process_type: "Direct Operations Manager F2F Round",
+    skills: ["US Healthcare RCM", "Denial Management", "Appeals", "HIPAA", "Payer Calling"],
+    eligibility: [
+      "1+ years experience in US Hospital or Physician Billing AR.",
+      "Clear understanding of commercial and government payer guidelines."
+    ],
+    responsibilities: [
+      "Manage high-dollar unpaid accounts and resolve complex insurance denials.",
+      "Mentor junior team members on telephone negotiation with US payers."
+    ],
+    description: "High-paying US Healthcare career with permanent cab transport and quarterly bonuses.",
+    status: "PUBLISHED",
+    featured: true,
+    views: 520,
+    posted_at: "2026-10-01T12:00:00Z",
+    created_at: "2026-10-01T12:00:00Z"
   }
 ];
 
@@ -465,7 +603,7 @@ export const DEMO_APPLICATIONS = [
     email: "zeeshan.mhd98@gmail.com",
     phone: "+91 83281 99012",
     resume_url: "https://example.com/resumes/zeeshan_bba.pdf",
-    cover_letter: "BBA graduate with 1.5 years customer service experience. Cleared internal Versant voice test with Sandru Anudeep. Slotted for TP client interview.",
+    cover_letter: "BBA graduate with 1.5 years customer service experience. Cleared internal Versant voice test with the Contact Team. Slotted for TP client interview.",
     status: "SHORTLISTED",
     created_at: "2026-10-04T11:00:00Z"
   },
@@ -533,7 +671,7 @@ export const DEMO_ENQUIRIES = [
     phone: "+91 98200 45678",
     subject: "Requirement of 35 Pre-screened Voice Candidates",
     type: "RECRUITER",
-    message: "Hi Anudeep, we are scaling our US Voice account in Hyderabad Hitec City campus. We need 35 candidates screened on Versant 4+ by Monday. Please share resumes.",
+    message: "Hi Contact Team, we are scaling our US Voice account in Hyderabad Hitec City campus. We need 35 candidates screened on Versant 4+ by Monday. Please share resumes.",
     status: "CONTACTED",
     created_at: "2026-10-05T12:30:00Z"
   },
@@ -546,7 +684,7 @@ export const DEMO_ENQUIRIES = [
     phone: "+91 97011 22334",
     subject: "Hiring Partnership for FinTech Startup",
     type: "EMPLOYER",
-    message: "Looking to hire 6 React & Node.js engineers. Sandru Anudeep aligned 12 candidate profiles. 5 candidates already offered. Partnership active.",
+    message: "Looking to hire 6 React & Node.js engineers. The Contact Team aligned 12 candidate profiles. 5 candidates already offered. Partnership active.",
     status: "RESOLVED",
     created_at: "2026-10-02T10:15:00Z"
   },
@@ -572,7 +710,7 @@ export const DEMO_TESTIMONIALS = [
     name: "Shiva Sai Jakka",
     role: "Candidate – Placed Associate",
     company: "Cognizant",
-    content: "Great support throughout the interview process. Sandru Anudeep sir guided me at every round and ensured complete clarity on communication and technical panel expectations.",
+    content: "Great support throughout the interview process. The Contact Team guided me at every round and ensured complete clarity on communication and technical panel expectations.",
     avatar_url: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
     rating: 5,
     is_published: true,
@@ -598,7 +736,7 @@ export const DEMO_TESTIMONIALS = [
     name: "A. Sadhana",
     role: "Candidate – Placed Specialist",
     company: "Teleperformance",
-    content: "TrainingAndPlacements provided direct client mapping and made the entire onboarding hassle-free. Sandru Anudeep was always reachable on call whenever I had doubts.",
+    content: "TrainingAndPlacements provided direct client mapping and made the entire onboarding hassle-free. The Contact Team was always reachable on call whenever I had doubts.",
     avatar_url: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80",
     rating: 4,
     is_published: true,

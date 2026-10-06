@@ -8,19 +8,19 @@ export const SITE_CONFIG = {
   brandNameFormatted: "TRAINING AND PLACEMENTS",
   shortBrand: "T&P",
   tagline: "Accelerate Your Career with Direct Client Drives & Verified Placements",
-  heroSubtitle: "Empowering job seekers across Hyderabad and Pan-India with 300+ successful closures in IT Engineering, Technical Services, US Healthcare, and Corporate Placements — personally mentored by Sandru Anudeep.",
+  heroSubtitle: "Empowering job seekers across Hyderabad and Pan-India with 300+ successful closures in IT Engineering, Technical Services, US Healthcare, and Corporate Placements — guided directly by our dedicated Contact Team.",
   establishedYear: "2024",
-  founder: "Sandru Anudeep",
-  founderTitle: "Founder & CEO",
-  directLine: "+91 8309740722",
-  directLineRaw: "+918309740722",
-  whatsappUrl: "https://wa.me/918309740722",
+  founder: "Contact Team",
+  founderTitle: "Placement & Support Desk",
+  directLine: "+91 77806 36263",
+  directLineRaw: "+917780636263",
+  whatsappUrl: "https://wa.me/917780636263",
   email: "contact@trainingandplacements.com",
   officeLocation: "Hyderabad, Telangana, India",
   hours: "Monday – Saturday: 9:00 AM – 7:30 PM IST",
   socials: {
-    whatsapp: "https://wa.me/918309740722",
-    linkedin: "https://www.linkedin.com/in/sandru-anudeep",
+    whatsapp: "https://wa.me/917780636263",
+    linkedin: "https://www.linkedin.com/company/trainingandplacements",
     instagram: "https://www.instagram.com/trainingandplacements"
   }
 };
@@ -86,7 +86,7 @@ export const HOW_IT_WORKS_STEPS = [
     step: "03",
     title: "SCREEN",
     headline: "1-on-1 Mock Mentoring & Vetting",
-    description: "Undergo professional profile evaluation, communication grooming, and round-by-round mock coaching personally directed by Sandru Anudeep."
+    description: "Undergo professional profile evaluation, communication grooming, and round-by-round mock coaching personally directed by our Contact Team."
   },
   {
     step: "04",
@@ -115,8 +115,8 @@ export const WHY_CHOOSE_US_ITEMS = [
   },
   {
     number: "03",
-    title: "Founder-Led Mentorship",
-    description: "1-on-1 personal guidance from Sandru Anudeep, helping candidates clear both communication rounds and technical client evaluations."
+    title: "Dedicated Team Mentorship",
+    description: "1-on-1 personal guidance from our Contact Team, helping candidates clear both communication rounds and technical client evaluations."
   },
   {
     number: "04",

@@ -76,7 +76,7 @@ export default function MobileMenu({ isOpen, onClose, navLinks }) {
             className="w-full flex items-center justify-center space-x-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-3 px-4 rounded-xl text-sm transition-colors"
           >
             <MessageSquare className="w-4 h-4" />
-            <span>Direct WhatsApp to Sandru Anudeep</span>
+            <span>Direct WhatsApp to {SITE_CONFIG.founder}</span>
           </a>
 
           <Link

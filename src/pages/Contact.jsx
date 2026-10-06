@@ -56,7 +56,7 @@ export default function Contact() {
                     <a href={`tel:${SITE_CONFIG.directLineRaw}`} className="text-[#111318] font-bold font-mono hover:text-teal-800">
                       {SITE_CONFIG.directLine}
                     </a>
-                    <span className="block text-[11px] text-[#6b7280]">Sandru Anudeep ({SITE_CONFIG.founderTitle})</span>
+                    <span className="block text-[11px] text-[#6b7280]">{SITE_CONFIG.founder} ({SITE_CONFIG.founderTitle})</span>
                   </div>
                 </div>
 
@@ -94,7 +94,7 @@ export default function Contact() {
                   className="w-full inline-flex items-center justify-center space-x-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-3.5 px-4 rounded-xl text-xs transition-colors shadow-xs"
                 >
                   <MessageSquare className="w-4 h-4" />
-                  <span>Direct WhatsApp to Sandru Anudeep</span>
+                  <span>Direct WhatsApp to {SITE_CONFIG.founder}</span>
                 </a>
               </div>
             </div>

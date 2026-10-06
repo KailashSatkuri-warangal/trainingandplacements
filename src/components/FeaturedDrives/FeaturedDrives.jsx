@@ -1,34 +1,40 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Sparkles, ChevronRight, ChevronLeft, MoveHorizontal } from "lucide-react";
+import { ArrowRight, Sparkles, ChevronRight, ChevronLeft } from "lucide-react";
 import { driveService } from "../../services/driveService";
 import JobCard from "../JobCard/JobCard";
 import CardSkeleton from "../Loading/CardSkeleton";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
+const CATEGORY_FILTERS = [
+  { id: "all", label: "All Drives" },
+  { id: "it", label: "IT & Software" },
+  { id: "healthcare", label: "US Healthcare (RCM)" },
+  { id: "operations", label: "Non-IT & Operations" },
+  { id: "freshers", label: "Freshers (2025/2026)" }
+];
 
 export default function FeaturedDrives() {
   const containerRef = useRef(null);
   const scrollTrackRef = useRef(null);
-  const [featuredDrives, setFeaturedDrives] = useState([]);
+  const [allDrives, setAllDrives] = useState([]);
+  const [activeCategory, setActiveCategory] = useState("all");
   const [isLoading, setIsLoading] = useState(true);
 
   // Scroll & drag interaction states
-  const [scrollProgress, setScrollProgress] = useState(0);
   const [canScrollLeftState, setCanScrollLeftState] = useState(false);
   const [canScrollRightState, setCanScrollRightState] = useState(true);
   const [isDragging, setIsDragging] = useState(false);
+
   const dragStartX = useRef(0);
   const dragStartScrollLeft = useRef(0);
   const hasMovedSignificantly = useRef(false);
 
+  // Fetch drives
   useEffect(() => {
     let isMounted = true;
-    driveService.getFeaturedDrives(6).then((data) => {
+    driveService.getFeaturedDrives(12).then((data) => {
       if (isMounted) {
-        setFeaturedDrives(data || []);
+        setAllDrives(data || []);
         setIsLoading(false);
       }
     });
@@ -37,82 +43,138 @@ export default function FeaturedDrives() {
     };
   }, []);
 
-  // Update scroll bounds & progress bar
+  // Filter drives based on selected category tab
+  const filteredDrives = allDrives.filter((drive) => {
+    if (activeCategory === "all") return true;
+    const catName = (typeof drive.category === "object" ? drive.category?.name : drive.category || "").toLowerCase();
+    const title = (drive.title || "").toLowerCase();
+    const exp = (drive.experience || "").toLowerCase();
+
+    if (activeCategory === "it") {
+      return catName.includes("it") || catName.includes("software") || catName.includes("engineering") || title.includes("developer") || title.includes("engineer");
+    }
+    if (activeCategory === "healthcare") {
+      return catName.includes("health") || catName.includes("rcm") || title.includes("healthcare") || title.includes("billing") || title.includes("ar caller");
+    }
+    if (activeCategory === "operations") {
+      return catName.includes("operation") || catName.includes("bpo") || catName.includes("customer") || title.includes("voice") || title.includes("specialist");
+    }
+    if (activeCategory === "freshers") {
+      return exp.includes("fresher") || title.includes("2025") || title.includes("2026") || title.includes("graduate");
+    }
+    return true;
+  });
+
+  // Calculate current card step width + gap
+  const getCardStep = useCallback(() => {
+    const track = scrollTrackRef.current;
+    if (!track) return 390;
+    const firstCard = track.querySelector(".featured-drive-card");
+    if (firstCard) {
+      return firstCard.offsetWidth + 24; // Card width plus space-x-6 (24px)
+    }
+    return 390;
+  }, []);
+
+  // Update scroll bounds & 0-100% progress bar
   const updateScrollBounds = useCallback(() => {
     const track = scrollTrackRef.current;
     if (!track) return;
     const maxScroll = track.scrollWidth - track.clientWidth;
+
     if (maxScroll <= 0) {
-      setScrollProgress(100);
       setCanScrollLeftState(false);
       setCanScrollRightState(false);
       return;
     }
-    const current = track.scrollLeft;
-    const progress = Math.min(100, Math.max(0, (current / maxScroll) * 100));
-    setScrollProgress(progress);
+
+    const current = Math.max(0, track.scrollLeft);
     setCanScrollLeftState(current > 8);
     setCanScrollRightState(current < maxScroll - 8);
   }, []);
 
-  // 1. Mouse wheel: translates vertical wheel scroll to horizontal card movement
+  // When changing category, reset scroll to start
+  const handleCategoryChange = (catId) => {
+    setActiveCategory(catId);
+    if (scrollTrackRef.current) {
+      scrollTrackRef.current.scrollTo({ left: 0, behavior: "smooth" });
+    }
+    setTimeout(updateScrollBounds, 150);
+  };
+
+  // Scroll functions
+  const scrollLeft = () => {
+    const track = scrollTrackRef.current;
+    if (!track) return;
+    const step = getCardStep();
+    track.scrollBy({ left: -step, behavior: "smooth" });
+    setTimeout(updateScrollBounds, 120);
+    setTimeout(updateScrollBounds, 350);
+  };
+
+  const scrollRight = () => {
+    const track = scrollTrackRef.current;
+    if (!track) return;
+    const step = getCardStep();
+    track.scrollBy({ left: step, behavior: "smooth" });
+    setTimeout(updateScrollBounds, 120);
+    setTimeout(updateScrollBounds, 350);
+  };
+
+  // Mouse wheel translation: translates vertical wheel scroll into horizontal card movement
   useEffect(() => {
     const track = scrollTrackRef.current;
     if (!track) return;
 
     const handleWheel = (e) => {
-      // If user scrolls vertically with mouse wheel or trackpad
-      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-        const maxScroll = track.scrollWidth - track.clientWidth;
-        if (maxScroll <= 0) return;
+      const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+      if (Math.abs(delta) < 2) return;
 
-        const scrollingRight = e.deltaY > 0;
-        const scrollingLeft = e.deltaY < 0;
+      const maxScroll = track.scrollWidth - track.clientWidth;
+      if (maxScroll <= 0) return;
 
-        // If track can still scroll horizontally in this direction
-        const canMoveRight = scrollingRight && track.scrollLeft < maxScroll - 4;
-        const canMoveLeft = scrollingLeft && track.scrollLeft > 4;
+      const atStart = track.scrollLeft <= 4 && delta < 0;
+      const atEnd = track.scrollLeft >= maxScroll - 4 && delta > 0;
 
-        if (canMoveRight || canMoveLeft) {
-          e.preventDefault();
-          track.scrollBy({
-            left: e.deltaY * 1.35,
-            behavior: "auto"
-          });
-          updateScrollBounds();
-        }
+      // If within horizontal scroll range, scroll horizontally
+      if (!atStart && !atEnd) {
+        e.preventDefault();
+        e.stopPropagation();
+        track.scrollLeft += delta * 1.25;
+        updateScrollBounds();
       }
     };
 
     track.addEventListener("wheel", handleWheel, { passive: false });
-    track.addEventListener("scroll", updateScrollBounds);
+    track.addEventListener("scroll", updateScrollBounds, { passive: true });
     window.addEventListener("resize", updateScrollBounds);
+
+    const timer = setTimeout(updateScrollBounds, 150);
 
     return () => {
       track.removeEventListener("wheel", handleWheel);
       track.removeEventListener("scroll", updateScrollBounds);
       window.removeEventListener("resize", updateScrollBounds);
+      clearTimeout(timer);
     };
-  }, [featuredDrives, updateScrollBounds]);
+  }, [filteredDrives, updateScrollBounds]);
 
-  // 2. Mouse Drag (Grab & Slide) interaction
+  // Mouse Drag (Grab & Slide) interaction
   const handleMouseDown = (e) => {
-    if (!scrollTrackRef.current) return;
+    if (!scrollTrackRef.current || e.button !== 0) return;
     setIsDragging(true);
     hasMovedSignificantly.current = false;
-    dragStartX.current = e.pageX - scrollTrackRef.current.offsetLeft;
+    dragStartX.current = e.pageX;
     dragStartScrollLeft.current = scrollTrackRef.current.scrollLeft;
   };
 
   const handleMouseMove = (e) => {
     if (!isDragging || !scrollTrackRef.current) return;
-    e.preventDefault();
-    const x = e.pageX - scrollTrackRef.current.offsetLeft;
-    const walk = (x - dragStartX.current) * 1.5;
-    if (Math.abs(walk) > 5) {
+    const diff = e.pageX - dragStartX.current;
+    if (Math.abs(diff) > 6) {
       hasMovedSignificantly.current = true;
     }
-    scrollTrackRef.current.scrollLeft = dragStartScrollLeft.current - walk;
+    scrollTrackRef.current.scrollLeft = dragStartScrollLeft.current - diff * 1.4;
     updateScrollBounds();
   };
 
@@ -120,71 +182,62 @@ export default function FeaturedDrives() {
     setIsDragging(false);
   };
 
-  // 3. Arrow button smooth scrolls (move right side box)
-  const scrollLeft = () => {
-    if (scrollTrackRef.current) {
-      scrollTrackRef.current.scrollBy({ left: -390, behavior: "smooth" });
-      setTimeout(updateScrollBounds, 350);
+  const handleCardClickCapture = (e) => {
+    if (hasMovedSignificantly.current) {
+      e.stopPropagation();
+      e.preventDefault();
+      hasMovedSignificantly.current = false;
     }
   };
 
-  const scrollRight = () => {
-    if (scrollTrackRef.current) {
-      scrollTrackRef.current.scrollBy({ left: 390, behavior: "smooth" });
-      setTimeout(updateScrollBounds, 350);
+  // Keyboard navigation
+  const handleKeyDown = (e) => {
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      scrollLeft();
+    } else if (e.key === "ArrowRight") {
+      e.preventDefault();
+      scrollRight();
     }
-  };
-
-  // 4. Click progress bar to jump to percentage
-  const handleProgressBarClick = (e) => {
-    const track = scrollTrackRef.current;
-    if (!track) return;
-    const rect = e.currentTarget.getBoundingClientRect();
-    const clickRatio = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
-    const maxScroll = track.scrollWidth - track.clientWidth;
-    track.scrollTo({
-      left: maxScroll * clickRatio,
-      behavior: "smooth"
-    });
-    setTimeout(updateScrollBounds, 350);
   };
 
   return (
     <section
       ref={containerRef}
-      className="py-20 md:py-28 bg-[#f4f4f0] border-b border-[#e6e6df] overflow-hidden select-none"
+      className="py-16 md:py-24 bg-[#f4f4f0] border-b border-[#e6e6df] overflow-hidden select-none"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-8">
           <div>
-            <div className="eyebrow flex items-center space-x-2 mb-2">
-              <Sparkles className="w-3.5 h-3.5 text-teal-700" />
+            <div className="eyebrow flex items-center space-x-2 mb-2 text-teal-800">
+              <Sparkles className="w-3.5 h-3.5 text-teal-700 animate-pulse" />
               <span>DIRECT CLIENT SCHEDULES</span>
             </div>
             <h2 className="editorial-title text-3xl sm:text-4xl md:text-5xl text-[#111318]">
               FEATURED HIRING DRIVES.
             </h2>
-            <p className="mt-3 text-sm text-[#6b7280] max-w-xl">
+            <p className="mt-2 text-sm text-[#6b7280] max-w-xl">
               Curated direct client drives in Hyderabad and Pan-India. Fast-track profile forwarding and 1-on-1 interview mentoring directly with hiring managers.
             </p>
           </div>
 
-          <div className="mt-6 md:mt-0 flex items-center space-x-3">
+          {/* Navigation Controls */}
+          <div className="mt-6 lg:mt-0 flex items-center space-x-3">
             {/* Scroll Left Button */}
             <button
               type="button"
               onClick={scrollLeft}
               disabled={!canScrollLeftState}
-              className={`p-3 rounded-full border transition-all shadow-xs ${
+              className={`p-3 rounded-full border transition-all ${
                 canScrollLeftState
-                  ? "bg-white border-[#e6e6df] hover:border-teal-700 hover:bg-neutral-50 text-[#111318] cursor-pointer"
-                  : "bg-white/50 border-[#e6e6df]/50 text-neutral-300 cursor-not-allowed"
+                  ? "bg-white border-[#e6e6df] hover:border-teal-700 hover:bg-neutral-50 text-[#111318] cursor-pointer hover:scale-105 active:scale-95 shadow-xs"
+                  : "bg-white/50 border-[#e6e6df]/50 text-neutral-300 cursor-not-allowed opacity-40"
               }`}
-              title="Scroll to previous opportunities"
+              title="Scroll left to view previous drives"
               aria-label="Scroll drives left"
             >
-              <ChevronLeft className="w-4 h-4" />
+              <ChevronLeft className="w-5 h-5" />
             </button>
 
             {/* Scroll Right Button */}
@@ -192,20 +245,21 @@ export default function FeaturedDrives() {
               type="button"
               onClick={scrollRight}
               disabled={!canScrollRightState}
-              className={`p-3 rounded-full border transition-all shadow-xs ${
+              className={`p-3 rounded-full border transition-all ${
                 canScrollRightState
-                  ? "bg-white border-[#e6e6df] hover:border-teal-700 hover:bg-neutral-50 text-[#111318] cursor-pointer"
-                  : "bg-white/50 border-[#e6e6df]/50 text-neutral-300 cursor-not-allowed"
+                  ? "bg-teal-800 border-teal-800 hover:bg-teal-700 text-white cursor-pointer hover:scale-105 active:scale-95 shadow-md ring-2 ring-teal-700/20"
+                  : "bg-white/50 border-[#e6e6df]/50 text-neutral-300 cursor-not-allowed opacity-40"
               }`}
-              title="Scroll to right-side opportunities"
+              title="Scroll right to view next drives"
               aria-label="Scroll drives right"
             >
-              <ChevronRight className="w-4 h-4" />
+              <ChevronRight className="w-5 h-5" />
             </button>
 
+            {/* Explore All Drives Link */}
             <Link
               to="/jobs"
-              className="inline-flex items-center space-x-2 bg-[#111318] hover:bg-teal-800 text-white text-xs font-semibold px-5 py-3 rounded-xl transition-all shadow-xs ml-2"
+              className="inline-flex items-center space-x-2 bg-[#111318] hover:bg-teal-800 text-white text-xs font-semibold px-5 py-3 rounded-xl transition-all shadow-xs ml-2 hover:scale-[1.02] active:scale-[0.98]"
             >
               <span>Explore All Drives</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -213,77 +267,114 @@ export default function FeaturedDrives() {
           </div>
         </div>
 
+        {/* Category Filter Pills */}
+        <div className="flex items-center space-x-2 overflow-x-auto pb-3 mb-6 scrollbar-none">
+          <div className="flex items-center space-x-1.5 bg-white p-1 rounded-2xl border border-[#e6e6df] shadow-2xs">
+            {CATEGORY_FILTERS.map((cat) => {
+              const isActive = activeCategory === cat.id;
+              return (
+                <button
+                  key={cat.id}
+                  type="button"
+                  onClick={() => handleCategoryChange(cat.id)}
+                  className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold transition-all whitespace-nowrap ${
+                    isActive
+                      ? "bg-teal-800 text-white shadow-xs"
+                      : "text-neutral-600 hover:text-neutral-900 hover:bg-[#f4f4f0]"
+                  }`}
+                >
+                  {cat.label}
+                </button>
+              );
+            })}
+          </div>
+          <span className="text-[11px] font-mono text-neutral-500 pl-2">
+            {filteredDrives.length} Drives Available
+          </span>
+        </div>
+
         {/* Dynamic Data Content */}
         {isLoading ? (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <CardSkeleton count={3} />
           </div>
-        ) : featuredDrives.length > 0 ? (
-          <div className="relative">
+        ) : filteredDrives.length > 0 ? (
+          <div className="relative group/carousel">
+            {/* Floating Left Arrow Overlay (Visible when scrollable left) */}
+            {canScrollLeftState && (
+              <button
+                type="button"
+                onClick={scrollLeft}
+                className="hidden md:flex absolute -left-5 top-1/2 -translate-y-1/2 z-30 w-12 h-12 items-center justify-center rounded-full bg-white border border-[#e6e6df] text-[#111318] shadow-xl hover:bg-neutral-50 hover:border-teal-700 hover:scale-110 active:scale-95 transition-all cursor-pointer"
+                title="Scroll left"
+                aria-label="Previous drives"
+              >
+                <ChevronLeft className="w-5 h-5 text-teal-900" />
+              </button>
+            )}
+
+            {/* Floating Right Arrow Overlay (Visible when scrollable right) */}
+            {canScrollRightState && (
+              <button
+                type="button"
+                onClick={scrollRight}
+                className="hidden md:flex absolute -right-5 top-1/2 -translate-y-1/2 z-30 w-12 h-12 items-center justify-center rounded-full bg-teal-800 text-white shadow-xl hover:bg-teal-700 hover:scale-110 active:scale-95 transition-all cursor-pointer ring-4 ring-teal-800/10"
+                title="Scroll right"
+                aria-label="Next drives"
+              >
+                <ChevronRight className="w-5 h-5 text-white" />
+              </button>
+            )}
+
             {/* Horizontal Scroll Track */}
             <div
               ref={scrollTrackRef}
+              data-lenis-prevent="true"
               onMouseDown={handleMouseDown}
               onMouseMove={handleMouseMove}
               onMouseUp={handleMouseUpOrLeave}
               onMouseLeave={handleMouseUpOrLeave}
-              className={`flex space-x-6 overflow-x-auto pb-4 pt-2 scrollbar-none snap-x snap-mandatory focus:outline-none transition-colors ${
+              onClickCapture={handleCardClickCapture}
+              onKeyDown={handleKeyDown}
+              className={`flex space-x-6 overflow-x-auto pb-4 pt-2 scroll-smooth scrollbar-none focus:outline-none transition-colors ${
                 isDragging ? "cursor-grabbing" : "cursor-grab"
               }`}
+              style={{ scrollBehavior: "smooth", WebkitOverflowScrolling: "touch" }}
               tabIndex={0}
-              aria-label="Featured hiring drives horizontal slider"
+              aria-label="Featured hiring drives horizontal slider. Use left and right arrow keys to navigate."
             >
-              {featuredDrives.map((job) => (
+              {filteredDrives.map((job) => (
                 <div
                   key={job.id}
-                  className="w-[320px] sm:w-[380px] flex-shrink-0 snap-start"
+                  className="featured-drive-card w-[320px] sm:w-[380px] flex-shrink-0"
                 >
                   <JobCard job={job} />
                 </div>
               ))}
             </div>
 
-            {/* Interactive Scroll Indicator Bar (Visual cue for moving right side box) */}
-            <div className="mt-6 pt-4 border-t border-[#e6e6df]/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-[#6b7280]">
-              <div className="flex items-center space-x-2">
-                <MoveHorizontal className="w-4 h-4 text-teal-700 animate-pulse" />
-                <span className="font-medium text-[#111318]">
-                  Scroll with mouse wheel or drag horizontally to view right-side drives
-                </span>
-              </div>
-
-              {/* Interactive Progress Bar */}
-              <div className="flex items-center space-x-3 w-full sm:w-64">
-                <div
-                  onClick={handleProgressBarClick}
-                  className="relative flex-grow h-2 bg-[#e6e6df] rounded-full overflow-hidden cursor-pointer hover:h-2.5 transition-all"
-                  title="Click to jump across drives"
-                >
-                  <div
-                    className="h-full bg-teal-800 rounded-full transition-all duration-150"
-                    style={{ width: `${Math.max(15, scrollProgress)}%` }}
-                  />
-                </div>
-                <span className="font-mono text-[11px] font-semibold text-neutral-500 min-w-[32px] text-right">
-                  {Math.round(scrollProgress)}%
-                </span>
-              </div>
-            </div>
           </div>
         ) : (
           <div className="bg-white rounded-2xl border border-[#e6e6df] p-12 text-center max-w-md mx-auto">
             <p className="text-sm font-semibold text-[#111318]">
-              No featured opportunities currently.
+              No drives match the selected filter.
             </p>
             <p className="text-xs text-[#6b7280] mt-1">
-              Check all available active hiring drives on our job board.
+              Select "All Drives" or check all active drives on our job board.
             </p>
-            <div className="pt-4">
+            <div className="pt-4 flex items-center justify-center space-x-3">
+              <button
+                type="button"
+                onClick={() => handleCategoryChange("all")}
+                className="px-4 py-2 bg-teal-800 text-white rounded-xl text-xs font-bold hover:bg-teal-700"
+              >
+                Reset Filter
+              </button>
               <Link
                 to="/jobs"
                 className="inline-flex items-center space-x-1.5 text-xs font-bold text-teal-800 hover:underline"
               >
-                <span>Browse All Opportunities</span>
+                <span>Browse All</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>

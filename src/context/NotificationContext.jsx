@@ -63,7 +63,7 @@ const INITIAL_PHONE_NOTIFICATIONS = [
     id: "notif-5",
     type: "system",
     title: "Fast-Track WhatsApp Alert",
-    subtitle: "Sandru Anudeep (+91 8309740722)",
+    subtitle: "Contact Team (+91 77806 36263)",
     message: "Candidate tapped WhatsApp fast-track routing for immediate interview slot.",
     time: "3h ago",
     timestamp: Date.now() - 3 * 60 * 60 * 1000,
@@ -78,7 +78,19 @@ export function NotificationProvider({ children }) {
   const [notifications, setNotifications] = useState(() => {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved) return JSON.parse(saved);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        return parsed.map((n) => ({
+          ...n,
+          subtitle: n.subtitle
+            ? n.subtitle
+                .replace("Sandru Anudeep (+91 98492 84088)", "Contact Team (+91 77806 36263)")
+                .replace("Kailash (+91 8309740722)", "Contact Team (+91 77806 36263)")
+                .replace("Sandru Anudeep", "Contact Team")
+                .replace("Kailash", "Contact Team")
+            : n.subtitle
+        }));
+      }
     } catch (e) {}
     return INITIAL_PHONE_NOTIFICATIONS;
   });
@@ -219,7 +231,7 @@ export function NotificationProvider({ children }) {
       {
         type: "system",
         title: "WhatsApp Fast-Track Ping",
-        subtitle: "Sandru Anudeep (+91 8309740722)",
+        subtitle: "Contact Team (+91 77806 36263)",
         message: "New candidate initiated direct WhatsApp interview verification.",
         company: "TrainingAndPlacements",
         tag: "Fast-Track",

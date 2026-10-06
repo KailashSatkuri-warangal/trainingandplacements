@@ -11,7 +11,7 @@ export const TESTIMONIALS_DATA = [
     role: "Candidate – Placed Candidate",
     category: "NON-IT PLACEMENT",
     email: "shivasaijakka99@gmail.com",
-    quote: "Great support throughout the interview process. Sandru Anudeep sir guided me at every round and ensured complete clarity on communication expectations.",
+    quote: "Great support throughout the interview process. The Contact Team guided me at every round and ensured complete clarity on communication expectations.",
     rating: 5,
     location: "Hyderabad",
     batch: "2024"
@@ -33,7 +33,7 @@ export const TESTIMONIALS_DATA = [
     role: "Candidate – Placed Candidate",
     category: "NON-IT PLACEMENT",
     email: "asadhana840@gmail.com",
-    quote: "TrainingAndPlacements provided direct client mapping and made the entire onboarding hassle-free. Sandru Anudeep was always reachable on call.",
+    quote: "TrainingAndPlacements provided direct client mapping and made the entire onboarding hassle-free. The Contact Team was always reachable on call.",
     rating: 5,
     location: "Hyderabad",
     batch: "2024"

@@ -280,9 +280,9 @@ export default function JobDetails() {
       ];
 
   const whatsappMessage = encodeURIComponent(
-    `Hi Sandru Anudeep, I want to apply for the "${drive.title}" hiring drive at ${companyName}. Please guide me on next steps.`
+    `Hi Contact Team, I want to apply for the "${drive.title}" hiring drive at ${companyName}. Please guide me on next steps.`
   );
-  const whatsappUrl = `https://wa.me/918309740722?text=${whatsappMessage}`;
+  const whatsappUrl = `https://wa.me/917780636263?text=${whatsappMessage}`;
 
   return (
     <div className="pt-28 pb-32 bg-[#fbfbf9] min-h-screen">
@@ -473,7 +473,7 @@ export default function JobDetails() {
                 </div>
                 <div className="flex items-start space-x-2.5">
                   <span className="font-mono font-bold text-teal-800">2.</span>
-                  <span>You receive 1-on-1 interview preparation personally mentored by Sandru Anudeep.</span>
+                  <span>You receive 1-on-1 interview preparation guided by our Contact Team.</span>
                 </div>
                 <div className="flex items-start space-x-2.5">
                   <span className="font-mono font-bold text-teal-800">3.</span>
@@ -548,7 +548,7 @@ export default function JobDetails() {
                   <span>Verified Hyderabad Placement Desk</span>
                 </div>
                 <p className="text-xs text-[#6b7280]">
-                  Contact Sandru Anudeep (+91 8309740722) directly for fast-track manual matching and schedule confirmation.
+                  Contact our Contact Team (+91 77806 36263) directly for fast-track manual matching and schedule confirmation.
                 </p>
               </div>
             </div>
@@ -599,7 +599,7 @@ export default function JobDetails() {
                   Application Submitted!
                 </h3>
                 <p className="text-xs sm:text-sm text-[#4b5563] leading-relaxed max-w-md mx-auto">
-                  Your profile for <strong>{drive.title}</strong> at <strong>{companyName}</strong> has been registered with our recruiter desk. Sandru Anudeep and our placement coordinators will review your submission within 24-48 hours.
+                  Your profile for <strong>{drive.title}</strong> at <strong>{companyName}</strong> has been registered with our recruiter desk. Our Contact Team and placement coordinators will review your submission within 24-48 hours.
                 </p>
 
                 <div className="pt-4 flex flex-col sm:flex-row gap-3 justify-center">

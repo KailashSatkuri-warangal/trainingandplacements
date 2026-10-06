@@ -15,7 +15,7 @@ export default function AdminLogin() {
   const [mode, setMode] = useState("signin"); // "signin" | "signup"
   const [email, setEmail] = useState("admin@trainingandplacements.com");
   const [password, setPassword] = useState("Admin@123456");
-  const [fullName, setFullName] = useState("Sandru Anudeep");
+  const [fullName, setFullName] = useState("Contact Team");
   const [errorMsg, setErrorMsg] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
   const [loading, setLoading] = useState(false);
@@ -143,7 +143,7 @@ export default function AdminLogin() {
                 required
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
-                placeholder="Sandru Anudeep"
+                placeholder="Contact Team"
                 className="w-full bg-[#0e1117] border border-neutral-700 rounded-xl px-4 py-3 text-xs text-white placeholder-neutral-500 focus:outline-hidden focus:border-teal-700"
               />
             </div>
@@ -217,7 +217,7 @@ export default function AdminLogin() {
       </div>
 
       <div className="text-center text-xs text-neutral-600">
-        © 2026 TrainingAndPlacements. Direct Desk Hotline: +91 8309740722
+        © 2026 TrainingAndPlacements. Direct Desk Hotline: +91 77806 36263
       </div>
     </div>
   );

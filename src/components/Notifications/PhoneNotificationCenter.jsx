@@ -204,7 +204,7 @@ export default function PhoneNotificationCenter() {
           </div>
 
           {/* Notifications Scroll List */}
-          <div className="flex-grow overflow-y-auto p-4 space-y-2.5">
+          <div data-lenis-prevent="true" className="flex-grow overflow-y-auto p-4 space-y-2.5">
             {filteredNotifications.length === 0 ? (
               <div className="h-full flex flex-col items-center justify-center text-center p-8 space-y-3">
                 <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-neutral-400">
@@ -322,12 +322,12 @@ export default function PhoneNotificationCenter() {
           <div className="p-4 bg-[#141824] border-t border-white/10 flex items-center justify-between text-[11px] text-neutral-400">
             <span>Fast-track WhatsApp Desk:</span>
             <a
-              href="https://wa.me/918309740722"
+              href="https://wa.me/917780636263"
               target="_blank"
               rel="noreferrer"
               className="text-emerald-400 hover:underline font-semibold"
             >
-              +91 8309740722
+              +91 77806 36263
             </a>
           </div>
         </motion.div>

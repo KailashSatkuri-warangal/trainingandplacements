@@ -19,13 +19,13 @@ export default function About() {
         </div>
       </section>
 
-      {/* Leadership Profile Feature */}
+      {/* Placement Support Team Feature */}
       <section className="py-16 bg-white border-y border-[#e6e6df] mb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5 bg-[#fbfbf9] rounded-3xl border border-[#e6e6df] p-8 sm:p-10 text-center relative overflow-hidden">
-              <div className="w-24 h-24 rounded-full bg-teal-800 text-white font-bold text-2xl flex items-center justify-center mx-auto mb-6 shadow-md">
-                SA
+              <div className="w-24 h-24 rounded-full bg-teal-800 text-white font-bold text-xl flex items-center justify-center mx-auto mb-6 shadow-md">
+                <Users className="w-10 h-10" />
               </div>
               <h3 className="text-2xl font-bold text-[#111318]">{SITE_CONFIG.founder}</h3>
               <p className="text-xs font-bold uppercase tracking-widest text-teal-800 mt-1">
@@ -68,7 +68,7 @@ export default function About() {
                 Founded with a straightforward mission: eliminate the confusion and anxiety job-seekers face when navigating automated job boards. Instead of sending resumes into a void, TrainingAndPlacements operates direct screening partnerships with 15+ Fortune 500 & Tier-1 global employers.
               </p>
               <p className="text-sm sm:text-base text-[#4b5563] leading-relaxed">
-                Under the direct leadership of Sandru Anudeep, candidates receive honest assessment, targeted mock interview simulations, and verified interview slots—allowing freshers and experienced professionals alike to secure genuine career offers in record time.
+                Under the direct guidance of our dedicated Contact Team, candidates receive honest assessment, targeted mock interview simulations, and verified interview slots—allowing freshers and experienced professionals alike to secure genuine career offers in record time.
               </p>
             </div>
           </div>

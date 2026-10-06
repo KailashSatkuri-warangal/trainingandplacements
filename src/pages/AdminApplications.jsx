@@ -237,7 +237,7 @@ export default function AdminApplications() {
 
               <div>
                 <label className="block font-bold text-neutral-800 mb-1">
-                  Recruiter Screening Notes (Sandru Anudeep / Panel):
+                  Recruiter Screening Notes (Contact Team / Panel):
                 </label>
                 <textarea
                   rows={4}

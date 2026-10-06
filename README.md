@@ -228,7 +228,7 @@ Edit `src/data/siteContent.js`:
 ```javascript
 export const SITE_CONFIG = {
   brandName: "TrainingAndPlacements",
-  founder: "Sandru Anudeep",
+  founder: "Kailash",
   founderTitle: "Founder & CEO",
   directLine: "+91 8309740722",
   whatsappUrl: "https://wa.me/918309740722",

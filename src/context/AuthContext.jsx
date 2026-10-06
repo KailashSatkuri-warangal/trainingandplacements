@@ -25,7 +25,7 @@ export function AuthProvider({ children }) {
       // If profile record does not exist yet, create or fallback
       const fallbackProfile = {
         id: userId,
-        name: userMeta?.name || userEmail?.split("@")[0] || "Sandru Anudeep",
+        name: userMeta?.name || userEmail?.split("@")[0] || "Contact Team",
         email: userEmail,
         role: "ADMIN" // Default admin access for authenticated dashboard users
       };
@@ -63,18 +63,25 @@ export function AuthProvider({ children }) {
           const localSession = localStorage.getItem("tp_admin_session");
           if (localSession) {
             const parsed = JSON.parse(localSession);
+            if (parsed?.profile?.name === "Sandru Anudeep" || parsed?.profile?.name === "Kailash") {
+              parsed.profile.name = "Contact Team";
+            }
+            if (parsed?.user?.user_metadata?.name === "Sandru Anudeep" || parsed?.user?.user_metadata?.name === "Kailash") {
+              parsed.user.user_metadata.name = "Contact Team";
+            }
             setUser(parsed.user);
             setProfile(parsed.profile);
+            localStorage.setItem("tp_admin_session", JSON.stringify(parsed));
           } else {
             // Provide active recruiter session so admin panel loads seamlessly
             const defaultAdmin = {
               id: "admin-tp-root",
               email: "admin@trainingandplacements.com",
-              user_metadata: { name: "Sandru Anudeep", role: "ADMIN" }
+              user_metadata: { name: "Contact Team", role: "ADMIN" }
             };
             const defaultProfile = {
               id: "admin-tp-root",
-              name: "Sandru Anudeep",
+              name: "Contact Team",
               email: "admin@trainingandplacements.com",
               role: "ADMIN"
             };
@@ -141,11 +148,11 @@ export function AuthProvider({ children }) {
         const adminUser = {
           id: "admin-tp-root",
           email: "admin@trainingandplacements.com",
-          user_metadata: { name: "Sandru Anudeep", role: "ADMIN" }
+          user_metadata: { name: "Contact Team", role: "ADMIN" }
         };
         const adminProfile = {
           id: "admin-tp-root",
-          name: "Sandru Anudeep",
+          name: "Contact Team",
           email: "admin@trainingandplacements.com",
           role: "ADMIN"
         };
@@ -162,11 +169,11 @@ export function AuthProvider({ children }) {
         const adminUser = {
           id: "admin-tp-root",
           email: "admin@trainingandplacements.com",
-          user_metadata: { name: "Sandru Anudeep", role: "ADMIN" }
+          user_metadata: { name: "Contact Team", role: "ADMIN" }
         };
         const adminProfile = {
           id: "admin-tp-root",
-          name: "Sandru Anudeep",
+          name: "Contact Team",
           email: "admin@trainingandplacements.com",
           role: "ADMIN"
         };

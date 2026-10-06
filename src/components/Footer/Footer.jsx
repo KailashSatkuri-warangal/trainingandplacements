@@ -157,7 +157,7 @@ export default function Footer() {
                   className="w-full inline-flex items-center justify-center space-x-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-2.5 px-4 rounded-xl text-xs transition-colors"
                 >
                   <MessageSquare className="w-3.5 h-3.5" />
-                  <span>Chat with Sandru Anudeep</span>
+                  <span>Chat with {SITE_CONFIG.founder}</span>
                 </a>
               </div>
             </div>

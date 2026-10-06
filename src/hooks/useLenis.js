@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 import Lenis from "lenis";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -7,8 +8,18 @@ gsap.registerPlugin(ScrollTrigger);
 
 export function useLenis() {
   const lenisRef = useRef(null);
+  const location = useLocation();
 
   useEffect(() => {
+    // Disable Lenis completely on all admin routes so native scrolling works 100% reliably
+    if (location.pathname.startsWith("/admin")) {
+      if (lenisRef.current) {
+        lenisRef.current.destroy();
+        lenisRef.current = null;
+      }
+      return;
+    }
+
     // Respect reduced motion preference
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReducedMotion) {
@@ -43,7 +54,7 @@ export function useLenis() {
       lenis.destroy();
       lenisRef.current = null;
     };
-  }, []);
+  }, [location.pathname]);
 
   return lenisRef;
 }

@@ -114,7 +114,7 @@ export default function Hero() {
             data-cursor-label="WHATSAPP"
           >
             <MessageSquare className="w-4 h-4 text-emerald-600" />
-            <span>Direct WhatsApp to Sandru Anudeep</span>
+            <span>Direct WhatsApp to {SITE_CONFIG.founder}</span>
           </a>
         </div>
 

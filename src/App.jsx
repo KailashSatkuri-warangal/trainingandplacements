@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
 import { NotificationProvider } from "./context/NotificationContext";
+import ErrorBoundary from "./components/ErrorBoundary";
 import { useLenis } from "./hooks/useLenis";
 
 // Layouts
@@ -34,9 +35,10 @@ export default function App() {
   useLenis();
 
   return (
-    <AuthProvider>
-      <NotificationProvider>
-        <Routes>
+    <ErrorBoundary>
+      <AuthProvider>
+        <NotificationProvider>
+          <Routes>
           {/* Public Visitor Experience */}
           <Route element={<PublicLayout />}>
             <Route path="/" element={<Home />} />
@@ -65,6 +67,7 @@ export default function App() {
         </Routes>
       </NotificationProvider>
     </AuthProvider>
+  </ErrorBoundary>
   );
 }
 

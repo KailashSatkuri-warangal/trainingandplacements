@@ -91,7 +91,7 @@ export default function ContactForm({ defaultType = "Candidate" }) {
           </div>
           <h3 className="text-2xl font-bold text-[#111318]">Message Sent Successfully</h3>
           <p className="text-sm text-[#4b5563] max-w-md mx-auto">
-            Thank you! Your inquiry has been forwarded directly to Sandru Anudeep and our Hyderabad recruiter desk. We typically respond within 24 hours.
+            Thank you! Your inquiry has been forwarded directly to our Contact Team and Hyderabad recruiter desk. We typically respond within 24 hours.
           </p>
           {referenceId && (
             <p className="text-xs font-mono bg-[#f4f4f0] px-3 py-1.5 rounded-lg inline-block text-neutral-600">

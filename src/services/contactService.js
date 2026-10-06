@@ -68,7 +68,7 @@ export const contactService = {
         return {
           success: true,
           data,
-          message: "Thank you! Your inquiry has been routed to Sandru Anudeep and the recruiter desk."
+          message: "Thank you! Your inquiry has been routed to our Contact Team and recruiter desk."
         };
       }
     } catch (e) {}
@@ -78,7 +78,7 @@ export const contactService = {
     return {
       success: true,
       data: newEnquiry,
-      message: "Thank you! Your inquiry has been routed to Sandru Anudeep and the recruiter desk."
+      message: "Thank you! Your inquiry has been routed to our Contact Team and recruiter desk."
     };
   },
 

@@ -243,7 +243,7 @@ insert into public.hiring_drives (
     ARRAY['Java', 'Spring Boot', 'SQL', 'Data Structures', 'Problem Solving'],
     ARRAY['B.Tech / B.E (CSE, IT, ECE, EEE) or MCA graduates.', 'Minimum 60% aggregate across 10th, 12th, and Graduation.', 'No active backlogs at final onboarding.'],
     ARRAY['Develop and maintain enterprise software modules under senior architect guidance.', 'Participate in code reviews, unit testing, and agile sprint planning.'],
-    'Cognizant is conducting direct campus-to-corporate hiring drives in Hyderabad. Shortlisted candidates receive dedicated 1-on-1 interview mentoring through Sandru Anudeep.',
+    'Cognizant is conducting direct campus-to-corporate hiring drives in Hyderabad. Shortlisted candidates receive dedicated 1-on-1 interview mentoring through Kailash.',
     'PUBLISHED',
     true,
     342
@@ -408,7 +408,7 @@ on conflict (id) do update set title = excluded.title, status = excluded.status;
 insert into public.applications (id, drive_id, candidate_name, email, phone, status, cover_letter, notes) values
   ('44444444-4444-4444-4444-444444444401', '33333333-3333-3333-3333-333333333301', 'Karthik Varma', 'karthik.varma2025@gmail.com', '+91 98480 23145', 'APPLIED', '2025 CSE graduate from JNTUH with 74% aggregate. Proficient in Java, Spring Boot, and LeetCode problem solving.', 'Pending initial screening verification.'),
   ('44444444-4444-4444-4444-444444444402', '33333333-3333-3333-3333-333333333302', 'Pooja Reddy', 'pooja.reddy.rcm@outlook.com', '+91 94901 88234', 'REVIEWING', 'B.Pharmacy 2024 pass-out with strong English voice command and medical terminology foundation.', 'Academic docs verified. Voice test scheduled.'),
-  ('44444444-4444-4444-4444-444444444403', '33333333-3333-3333-3333-333333333303', 'Mohammed Zeeshan', 'zeeshan.mhd98@gmail.com', '+91 83281 99012', 'SHORTLISTED', 'BBA graduate with 1.5 years customer service experience. Cleared internal Versant voice test with Sandru Anudeep.', 'Slotted for Teleperformance client panel.'),
+  ('44444444-4444-4444-4444-444444444403', '33333333-3333-3333-3333-333333333303', 'Mohammed Zeeshan', 'zeeshan.mhd98@gmail.com', '+91 83281 99012', 'SHORTLISTED', 'BBA graduate with 1.5 years customer service experience. Cleared internal Versant voice test with Kailash.', 'Slotted for Teleperformance client panel.'),
   ('44444444-4444-4444-4444-444444444404', '33333333-3333-3333-3333-333333333301', 'Sneha Goud', 'sneha.goud99@gmail.com', '+91 70321 44567', 'PLACED', 'Attended TrainingAndPlacements mock interview. Successfully cleared Cognizant technical and HR rounds.', 'OFFER RELEASED: LOI received ₹4.75 LPA.'),
   ('44444444-4444-4444-4444-444444444405', '33333333-3333-3333-3333-333333333305', 'Ramesh Naidu', 'ramesh.naidu@yahoo.com', '+91 99887 66554', 'REJECTED', '90 days notice period not acceptable by Capgemini immediate joining requirement.', 'Rejected due to notice period mismatch.')
 on conflict (id) do update set status = excluded.status;
@@ -416,23 +416,23 @@ on conflict (id) do update set status = excluded.status;
 -- E. CONTACT ENQUIRIES (All types & statuses)
 insert into public.contact_enquiries (id, name, email, phone, subject, type, status, message) values
   ('55555555-5555-5555-5555-555555555501', 'Sai Krishna Rao', 'saikrishna.rao@gmail.com', '+91 88970 12345', '2025 B.Tech Freshers Placement Schedule', 'CANDIDATE', 'NEW', 'Sir, I am a 2025 pass-out from Warangal. Can you please let me know if walk-in or virtual drives are scheduled for Cognizant or Capgemini this weekend?'),
-  ('55555555-5555-5555-5555-555555555502', 'Neha Mathur', 'neha.mathur@teleperformance.com', '+91 98200 45678', 'Requirement of 35 Pre-screened Voice Candidates', 'RECRUITER', 'CONTACTED', 'Hi Anudeep, we are scaling our US Voice account in Hyderabad Hitec City campus. We need 35 candidates screened on Versant 4+ by Monday. Please share resumes.'),
-  ('55555555-5555-5555-5555-555555555503', 'Venkatesh Prasad', 'venkatesh@clarissolutions.in', '+91 97011 22334', 'Hiring Partnership for FinTech Startup', 'EMPLOYER', 'RESOLVED', 'Looking to hire 6 React & Node.js engineers. Sandru Anudeep aligned 12 candidate profiles. 5 candidates already offered. Partnership active.'),
+  ('55555555-5555-5555-5555-555555555502', 'Neha Mathur', 'neha.mathur@teleperformance.com', '+91 98200 45678', 'Requirement of 35 Pre-screened Voice Candidates', 'RECRUITER', 'CONTACTED', 'Hi Kailash, we are scaling our US Voice account in Hyderabad Hitec City campus. We need 35 candidates screened on Versant 4+ by Monday. Please share resumes.'),
+  ('55555555-5555-5555-5555-555555555503', 'Venkatesh Prasad', 'venkatesh@clarissolutions.in', '+91 97011 22334', 'Hiring Partnership for FinTech Startup', 'EMPLOYER', 'RESOLVED', 'Looking to hire 6 React & Node.js engineers. Kailash aligned 12 candidate profiles. 5 candidates already offered. Partnership active.'),
   ('55555555-5555-5555-5555-555555555504', 'Dr. K. Srinivas', 'principal@cbit.ac.in', '+91 94400 11223', 'Campus Placement Training Collaboration', 'GENERAL', 'ARCHIVED', 'Inquiry regarding pre-placement training modules and mock technical simulations for 4th year college batch.')
 on conflict (id) do update set status = excluded.status;
 
 -- F. TESTIMONIALS (All ratings, published and draft)
 insert into public.testimonials (id, name, role, company, content, rating, is_published) values
-  ('66666666-6666-6666-6666-666666666601', 'Shiva Sai Jakka', 'Candidate – Placed Associate', 'Cognizant', 'Great support throughout the interview process. Sandru Anudeep sir guided me at every round and ensured complete clarity on communication and technical panel expectations.', 5, true),
+  ('66666666-6666-6666-6666-666666666601', 'Shiva Sai Jakka', 'Candidate – Placed Associate', 'Cognizant', 'Great support throughout the interview process. Kailash sir guided me at every round and ensured complete clarity on communication and technical panel expectations.', 5, true),
   ('66666666-6666-6666-6666-666666666602', 'Afrid Fareed', 'Candidate – Placed Executive', 'R1 RCM', 'Helped me get placed smoothly with prompt coordination, mock voice rounds, and transparent guidance. Highly recommended for US Healthcare and Non-IT careers!', 5, true),
-  ('66666666-6666-6666-6666-666666666603', 'A. Sadhana', 'Candidate – Placed Specialist', 'Teleperformance', 'TrainingAndPlacements provided direct client mapping and made the entire onboarding hassle-free. Sandru Anudeep was always reachable on call whenever I had doubts.', 4, true),
+  ('66666666-6666-6666-6666-666666666603', 'A. Sadhana', 'Candidate – Placed Specialist', 'Teleperformance', 'TrainingAndPlacements provided direct client mapping and made the entire onboarding hassle-free. Kailash was always reachable on call whenever I had doubts.', 4, true),
   ('66666666-6666-6666-6666-666666666604', 'Rohit Nambiar', 'Candidate – KYC Operations', 'Concentrix', 'Zero intermediary charges and 100% genuine corporate slots. The mock round gave me high confidence for the client scenario test.', 5, true),
   ('66666666-6666-6666-6666-666666666605', 'Pravallika K.', 'Candidate – Under Final Onboarding', 'Capgemini', 'Mock interview practice was directly aligned with client technical questions. Awaiting DOJ confirmation.', 5, false)
 on conflict (id) do update set content = excluded.content;
 
 -- G. ADMIN PROFILE
 insert into public.profiles (id, name, email, role) values
-  ('91285c96-062b-4197-ba6d-208a801984a4', 'Sandru Anudeep', 'admin@trainingandplacements.com', 'SUPER_ADMIN')
+  ('91285c96-062b-4197-ba6d-208a801984a4', 'Kailash', 'admin@trainingandplacements.com', 'SUPER_ADMIN')
 on conflict (id) do update set role = 'SUPER_ADMIN';
 
 -- ====================================================================

@@ -68,11 +68,11 @@ export default function AdminLayout() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#f4f4f0] flex flex-col md:flex-row text-[#111318]">
+    <div className="min-h-screen bg-[#f4f4f0] flex flex-col md:flex-row text-[#111318]" data-lenis-prevent="true">
       <ScrollToTop />
 
       {/* Desktop Sidebar */}
-      <aside className="hidden md:flex flex-col justify-between w-64 bg-[#0e1117] text-white p-5 border-r border-neutral-800 flex-shrink-0 min-h-screen sticky top-0 h-screen overflow-y-auto">
+      <aside className="hidden md:flex flex-col justify-between w-64 bg-[#0e1117] text-white p-5 border-r border-neutral-800 flex-shrink-0 sticky top-0 h-screen overflow-y-auto" data-lenis-prevent="true">
         <div className="space-y-6">
           {/* Brand Monogram */}
           <Link to="/admin" className="flex items-center space-x-3 text-white">
@@ -241,7 +241,7 @@ export default function AdminLayout() {
       )}
 
       {/* Admin Content Area with Global Top Header */}
-      <div className="flex-grow flex flex-col min-w-0 h-screen overflow-y-auto">
+      <div className="flex-grow flex flex-col min-w-0 min-h-screen" data-lenis-prevent="true">
         {/* Desktop Top Header Bar */}
         <header className="hidden md:flex items-center justify-between px-8 py-3.5 bg-white border-b border-[#e6e6df] sticky top-0 z-30">
           <div className="flex items-center space-x-3">
