@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, NavLink, Outlet, useNavigate, useLocation } from "react-router-dom";
+import { Link, NavLink, Outlet, Navigate, useNavigate, useLocation } from "react-router-dom";
 import {
   LayoutDashboard,
   Briefcase,
@@ -27,7 +27,7 @@ import ScrollToTop from "../components/ScrollToTop";
 
 export default function AdminLayout() {
   const { user, profile, loading, signOut } = useAuth();
-  const { unreadCount, toggleCenter, simulatePhoneNotification } = useNotifications();
+  const { unreadCount, toggleCenter } = useNotifications();
   const navigate = useNavigate();
   const location = useLocation();
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
@@ -46,10 +46,9 @@ export default function AdminLayout() {
     );
   }
 
-  // If unauthenticated, redirect to /admin/login
+  // If unauthenticated, redirect to /admin/login cleanly via Navigate component
   if (!user) {
-    navigate("/admin/login", { replace: true, state: { from: location } });
-    return null;
+    return <Navigate to="/admin/login" replace state={{ from: location }} />;
   }
 
   const handleSignOut = async () => {

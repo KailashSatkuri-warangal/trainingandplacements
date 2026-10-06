@@ -95,7 +95,7 @@ export default function Navbar() {
                 title="Connect directly with Recruiter Desk on WhatsApp"
               >
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                <span>Direct Desk: +91 8328246487</span>
+                <span>Direct Desk: {SITE_CONFIG.directLine}</span>
               </a>
 
               <Link

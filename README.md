@@ -189,7 +189,7 @@ Edit `src/data/jobs.js`:
   skills: ["AWS", "Linux", "Docker"],
   eligibility: ["BE / B.Tech CSE / IT"],
   responsibilities: ["Develop and automate cloud systems..."],
-  applyUrl: "https://wa.me/918328246487?text=Application",
+  applyUrl: "https://wa.me/918309740722?text=Application",
   postedDate: "2026-10-06"
 }
 ```
@@ -230,8 +230,8 @@ export const SITE_CONFIG = {
   brandName: "TrainingAndPlacements",
   founder: "Sandru Anudeep",
   founderTitle: "Founder & CEO",
-  directLine: "+91 8328246487",
-  whatsappUrl: "https://wa.me/918328246487",
+  directLine: "+91 8309740722",
+  whatsappUrl: "https://wa.me/918309740722",
   officeLocation: "Hyderabad, Telangana, India",
   // ...
 };

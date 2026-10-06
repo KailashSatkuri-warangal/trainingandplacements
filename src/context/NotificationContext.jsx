@@ -63,7 +63,7 @@ const INITIAL_PHONE_NOTIFICATIONS = [
     id: "notif-5",
     type: "system",
     title: "Fast-Track WhatsApp Alert",
-    subtitle: "Sandru Anudeep (+91 8328246487)",
+    subtitle: "Sandru Anudeep (+91 8309740722)",
     message: "Candidate tapped WhatsApp fast-track routing for immediate interview slot.",
     time: "3h ago",
     timestamp: Date.now() - 3 * 60 * 60 * 1000,
@@ -219,7 +219,7 @@ export function NotificationProvider({ children }) {
       {
         type: "system",
         title: "WhatsApp Fast-Track Ping",
-        subtitle: "Sandru Anudeep (+91 8328246487)",
+        subtitle: "Sandru Anudeep (+91 8309740722)",
         message: "New candidate initiated direct WhatsApp interview verification.",
         company: "TrainingAndPlacements",
         tag: "Fast-Track",

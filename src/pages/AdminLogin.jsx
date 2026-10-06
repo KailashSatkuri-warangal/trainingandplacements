@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate, useLocation, Link } from "react-router-dom";
+import { Navigate, useNavigate, useLocation, Link } from "react-router-dom";
 import {
   Lock,
   Mail,
@@ -24,11 +24,10 @@ export default function AdminLogin() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // If already authenticated, redirect
+  // If already authenticated, redirect cleanly via Navigate component
   if (isAuthenticated) {
     const from = location.state?.from?.pathname || "/admin";
-    navigate(from, { replace: true });
-    return null;
+    return <Navigate to={from} replace />;
   }
 
   const handleSubmit = async (e) => {
@@ -218,7 +217,7 @@ export default function AdminLogin() {
       </div>
 
       <div className="text-center text-xs text-neutral-600">
-        © 2026 TrainingAndPlacements. Direct Desk Hotline: +91 8328246487
+        © 2026 TrainingAndPlacements. Direct Desk Hotline: +91 8309740722
       </div>
     </div>
   );

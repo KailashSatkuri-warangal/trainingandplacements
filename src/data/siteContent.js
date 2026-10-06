@@ -12,14 +12,14 @@ export const SITE_CONFIG = {
   establishedYear: "2024",
   founder: "Sandru Anudeep",
   founderTitle: "Founder & CEO",
-  directLine: "+91 8328246487",
-  directLineRaw: "+918328246487",
-  whatsappUrl: "https://wa.me/918328246487",
+  directLine: "+91 8309740722",
+  directLineRaw: "+918309740722",
+  whatsappUrl: "https://wa.me/918309740722",
   email: "contact@trainingandplacements.com",
   officeLocation: "Hyderabad, Telangana, India",
   hours: "Monday – Saturday: 9:00 AM – 7:30 PM IST",
   socials: {
-    whatsapp: "https://wa.me/918328246487",
+    whatsapp: "https://wa.me/918309740722",
     linkedin: "https://www.linkedin.com/in/sandru-anudeep",
     instagram: "https://www.instagram.com/trainingandplacements"
   }

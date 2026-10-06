@@ -32,7 +32,7 @@ export default function AdminDriveCreate() {
     responsibilities: "Deliver high quality engineering tasks; collaborate with client leads; maintain SLA benchmarks",
     requirements: "Clear logical thinking; good communication; immediate joiner",
     application_process: "1. Profile screening; 2. 1-on-1 Mock Interview Prep; 3. Client Panel Round",
-    application_url: "https://wa.me/918328246487?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20this%20drive",
+    application_url: "https://wa.me/918309740722?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20this%20drive",
     application_deadline: "",
     featured: false,
     status: "PUBLISHED"

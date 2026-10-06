@@ -54,7 +54,7 @@ export default function Admin() {
     skills: "",
     eligibility: "",
     responsibilities: "",
-    applyUrl: `https://wa.me/918328246487?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20this%20role`
+    applyUrl: `https://wa.me/918309740722?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20this%20role`
   });
 
   // Load jobs from Supabase
@@ -146,7 +146,7 @@ export default function Admin() {
       skills: "Communication, Technical Basics, Problem Solving",
       eligibility: "Any Graduate (2024 - 2026), 60% throughout academics",
       responsibilities: "Handle client deliverables, collaborate with engineering leads, maintain quality compliance",
-      applyUrl: `https://wa.me/918328246487?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20${newId}`
+      applyUrl: `https://wa.me/918309740722?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20${newId}`
     });
     setEditingJob(null);
     setShowFormModal(true);

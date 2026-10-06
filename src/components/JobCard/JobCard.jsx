@@ -13,7 +13,7 @@ export default function JobCard({ job }) {
   const locationDisplay = job.location || "Hyderabad";
   const workModeDisplay = job.work_mode || job.workMode || "Work From Office";
   const skillsArray = Array.isArray(job.skills) ? job.skills : [];
-  const applyUrl = job.application_url || job.applyUrl || `https://wa.me/918328246487?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20${encodeURIComponent(job.title)}`;
+  const applyUrl = job.application_url || job.applyUrl || `https://wa.me/918309740722?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20${encodeURIComponent(job.title)}`;
 
   return (
     <div

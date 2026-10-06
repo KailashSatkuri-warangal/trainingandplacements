@@ -45,7 +45,7 @@ values
     ARRAY['CATIA V5/V6', 'Parametric 3D Modeling', 'Assembly Design', 'GD&T', 'Engineering Tolerances'],
     ARRAY['BE / B.Tech in Mechanical, Aerospace, Aeronautical or Allied Engineering', '2025 & 2026 graduating batches with minimum 60% throughout academics', 'No active backlogs at the time of final onboarding'],
     ARRAY['Working knowledge of CATIA V5 / V6 3D modeling, parametric part modeling, and assembly concepts', 'Understanding of mechanical engineering drawings, GD&T, and engineering tolerance specifications', 'Collaborate with global aerospace and industrial engineering design teams'],
-    'https://wa.me/918328246487?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Capgemini%20Engineering%20Hiring%20Drive',
+    'https://wa.me/918309740722?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Capgemini%20Engineering%20Hiring%20Drive',
     true, 'PUBLISHED', 142, current_date,
     'Direct off-campus engineering hiring drive for fresh graduates with specialized CAD modeling tracks.',
     'Capgemini Engineering is conducting a direct campus and off-campus recruitment drive for engineering graduates in mechanical, aeronautical, and related technical disciplines.'
@@ -63,7 +63,7 @@ values
     ARRAY['Customer Communication', 'Email & Chat Etiquette', 'Problem Solving', 'SLA Compliance'],
     ARRAY['Any Graduate / Undergraduate (Batch 2020 - 2025)', 'Excellent verbal and written English communication skills', 'Comfortable with rotational shift timings and office cab radius'],
     ARRAY['Handling customer support inquiries and workflow operations for Google client services', 'Maintaining top-tier service quality, accuracy, and client compliance standards', 'Logging and resolving real-time account and service requests'],
-    'https://wa.me/918328246487?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Teleperformance%20Google%20Process',
+    'https://wa.me/918309740722?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Teleperformance%20Google%20Process',
     true, 'PUBLISHED', 289, current_date,
     'Urgent hiring drive for Google client enterprise operations with 2-way cab and free food provided.',
     'Exclusive corporate customer support & digital workflow operation roles for premier global tech search giant services.'
@@ -81,7 +81,7 @@ values
     ARRAY['Geographic Data Analysis', 'Quality Assurance', 'Web Navigation', 'Attention to Detail'],
     ARRAY['Any Degree / Diploma / Post-Graduation (2021 - 2026 batches)', 'Good comprehension and computer literacy', 'Reliable home internet infrastructure after office onboarding training'],
     ARRAY['Reviewing, validating, and updating spatial geographic data for Google Mapping non-voice domain', 'Quality assurance of road networks, address points, and location metadata', 'Adhering to project quality matrices and strict compliance protocols'],
-    'https://wa.me/918328246487?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Cognizant%20Google%20Mapping',
+    'https://wa.me/918309740722?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Cognizant%20Google%20Mapping',
     true, 'PUBLISHED', 315, current_date,
     'Remote work opportunity analyzing geographic spatial information and digital road maps.',
     'Specialized spatial data validation project reviewing mapping information, transit paths, and landmark verification.'
@@ -99,7 +99,7 @@ values
     ARRAY['Medical Billing', 'Charge Entry', 'Claim Submission', 'US Healthcare Basics'],
     ARRAY['Freshers from B.Sc, B.Com, B.Pharmacy, B.Tech, or any stream (2023-2026)', 'Willingness to work night shifts with 2-way cab provided', 'Clear English reading & comprehension'],
     ARRAY['Managing US healthcare patient registration and insurance claim submissions', 'Validating medical claim billing accuracy and resolving initial rejections', 'Collaborating with hospital billing teams to expedite claim collections'],
-    'https://wa.me/918328246487?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20R1%20RCM%20Drive',
+    'https://wa.me/918309740722?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20R1%20RCM%20Drive',
     true, 'PUBLISHED', 201, current_date,
     'Recession-proof US Healthcare Revenue Cycle Management drive with fast 10-day process.',
     'Launch your career in the recession-proof US Healthcare Revenue Cycle Management (RCM) sector with R1 RCM.'
@@ -117,7 +117,7 @@ values
     ARRAY['Data Structures & Algorithms', 'Java / Python', 'React / Node.js', 'SQL Databases', 'Git'],
     ARRAY['ONLY 2026 Batch passing out B.Tech / BE (CSE, IT, ECE, EEE)', 'Minimum 65% aggregate throughout 10th, 12th, and Engineering', 'Clear programming fundamentals and problem solving acumen'],
     ARRAY['Full-stack Application Development (Backend & Frontend)', 'Codebase Maintenance, Unit Testing, and Debugging', 'Participate in agile sprint delivery and client technical demos'],
-    'https://wa.me/918328246487?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Virtusa%202026%20Drive',
+    'https://wa.me/918309740722?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Virtusa%202026%20Drive',
     true, 'PUBLISHED', 178, current_date,
     'Campus off-drive for 2026 engineering graduates with direct technical interviews.',
     'Premier entry-level campus recruitment drive for final-year engineering graduates across core development tracks.'

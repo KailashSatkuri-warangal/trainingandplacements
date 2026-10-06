@@ -322,12 +322,12 @@ export default function PhoneNotificationCenter() {
           <div className="p-4 bg-[#141824] border-t border-white/10 flex items-center justify-between text-[11px] text-neutral-400">
             <span>Fast-track WhatsApp Desk:</span>
             <a
-              href="https://wa.me/918328246487"
+              href="https://wa.me/918309740722"
               target="_blank"
               rel="noreferrer"
               className="text-emerald-400 hover:underline font-semibold"
             >
-              +91 8328246487
+              +91 8309740722
             </a>
           </div>
         </motion.div>

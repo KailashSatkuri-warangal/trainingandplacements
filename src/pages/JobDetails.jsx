@@ -282,7 +282,7 @@ export default function JobDetails() {
   const whatsappMessage = encodeURIComponent(
     `Hi Sandru Anudeep, I want to apply for the "${drive.title}" hiring drive at ${companyName}. Please guide me on next steps.`
   );
-  const whatsappUrl = `https://wa.me/918328246487?text=${whatsappMessage}`;
+  const whatsappUrl = `https://wa.me/918309740722?text=${whatsappMessage}`;
 
   return (
     <div className="pt-28 pb-32 bg-[#fbfbf9] min-h-screen">
@@ -548,7 +548,7 @@ export default function JobDetails() {
                   <span>Verified Hyderabad Placement Desk</span>
                 </div>
                 <p className="text-xs text-[#6b7280]">
-                  Contact Sandru Anudeep (+91 8328246487) directly for fast-track manual matching and schedule confirmation.
+                  Contact Sandru Anudeep (+91 8309740722) directly for fast-track manual matching and schedule confirmation.
                 </p>
               </div>
             </div>

@@ -32,7 +32,7 @@ export const JOBS_DATA = [
       "Understanding of mechanical engineering drawings, GD&T, and engineering tolerance specifications",
       "Collaborate with global aerospace and industrial engineering design teams"
     ],
-    applyUrl: "https://wa.me/918328246487?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Capgemini%20Engineering%20Hiring%20Drive%20(TR1001)",
+    applyUrl: "https://wa.me/918309740722?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Capgemini%20Engineering%20Hiring%20Drive%20(TR1001)",
     postedDate: "2026-09-06"
   },
   {
@@ -63,7 +63,7 @@ export const JOBS_DATA = [
       "Maintaining top-tier service quality, accuracy, and client compliance standards",
       "Logging and resolving real-time account and service requests"
     ],
-    applyUrl: "https://wa.me/918328246487?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Teleperformance%20Google%20Process%20(TR1002)",
+    applyUrl: "https://wa.me/918309740722?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Teleperformance%20Google%20Process%20(TR1002)",
     postedDate: "2026-09-06"
   },
   {
@@ -94,7 +94,7 @@ export const JOBS_DATA = [
       "Quality assurance of road networks, address points, and location metadata",
       "Adhering to project quality matrices and strict compliance protocols"
     ],
-    applyUrl: "https://wa.me/918328246487?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Cognizant%20Google%20Mapping%20Associate%20(TR1003)",
+    applyUrl: "https://wa.me/918309740722?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Cognizant%20Google%20Mapping%20Associate%20(TR1003)",
     postedDate: "2026-09-05"
   },
   {
@@ -125,7 +125,7 @@ export const JOBS_DATA = [
       "Ensuring 100% compliance with client standards and zero escalation turnarounds",
       "Coordinating with internal engineering leads for root cause resolutions"
     ],
-    applyUrl: "https://wa.me/918328246487?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Tech%20Mahindra%20Non-Voice%20Specialist%20(TR1004)",
+    applyUrl: "https://wa.me/918309740722?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Tech%20Mahindra%20Non-Voice%20Specialist%20(TR1004)",
     postedDate: "2026-09-05"
   },
   {
@@ -156,7 +156,7 @@ export const JOBS_DATA = [
       "Full professional training and placement assistance provided by WNS Global",
       "Zero defect processing under strict quality oversight"
     ],
-    applyUrl: "https://wa.me/918328246487?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20WNS%20Global%20Associate%20(TR1005)",
+    applyUrl: "https://wa.me/918309740722?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20WNS%20Global%20Associate%20(TR1005)",
     postedDate: "2026-09-04"
   },
   {
@@ -187,7 +187,7 @@ export const JOBS_DATA = [
       "Resolving user tickets with high empathy and first-time resolution accuracy",
       "Maintaining CSAT ratings above 92%"
     ],
-    applyUrl: "https://wa.me/918328246487?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Wipro%20Customer%20Service%20(TR1006)",
+    applyUrl: "https://wa.me/918309740722?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Wipro%20Customer%20Service%20(TR1006)",
     postedDate: "2026-09-04"
   },
   {
@@ -218,7 +218,7 @@ export const JOBS_DATA = [
       "Adhere to customer experience benchmarks and compliance protocols",
       "Participate actively in skill enhancement workshops"
     ],
-    applyUrl: "https://wa.me/918328246487?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Concentrix%20Apprenticeship%20(TR1007)",
+    applyUrl: "https://wa.me/918309740722?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Concentrix%20Apprenticeship%20(TR1007)",
     postedDate: "2026-09-03"
   },
   {
@@ -249,7 +249,7 @@ export const JOBS_DATA = [
       "Resolving catalog inquiries, shipping status, and digital customer requests",
       "Meeting prompt turnaround standards on inbound shopper tickets"
     ],
-    applyUrl: "https://wa.me/918328246487?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Firstsource%20JD%20Sports%20(TR1008)",
+    applyUrl: "https://wa.me/918309740722?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Firstsource%20JD%20Sports%20(TR1008)",
     postedDate: "2026-09-03"
   },
   {
@@ -280,7 +280,7 @@ export const JOBS_DATA = [
       "Adhering to project quality matrices and strict compliance protocols",
       "Timely completion of assigned daily record quotas"
     ],
-    applyUrl: "https://wa.me/918328246487?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Wipro%20Freshers%20Non-Voice%20(TR1009)",
+    applyUrl: "https://wa.me/918309740722?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Wipro%20Freshers%20Non-Voice%20(TR1009)",
     postedDate: "2026-09-02"
   },
   {
@@ -311,7 +311,7 @@ export const JOBS_DATA = [
       "Ensuring high customer satisfaction (CSAT) and adherence to process guidelines",
       "Escalating security or sensitive discrepancies to senior team leads"
     ],
-    applyUrl: "https://wa.me/918328246487?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Teleperformance%20Chat%20Associate%20(TR1010)",
+    applyUrl: "https://wa.me/918309740722?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Teleperformance%20Chat%20Associate%20(TR1010)",
     postedDate: "2026-09-02"
   },
   {
@@ -342,7 +342,7 @@ export const JOBS_DATA = [
       "Hands-on expertise in Gosu programming, Guidewire APIs, integration plugins, or test automation",
       "Participate in sprint planning and client architectural reviews"
     ],
-    applyUrl: "https://wa.me/918328246487?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Capgemini%20Guidewire%20Hiring%20(TR1012)",
+    applyUrl: "https://wa.me/918309740722?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Capgemini%20Guidewire%20Hiring%20(TR1012)",
     postedDate: "2026-09-01"
   },
   {
@@ -373,7 +373,7 @@ export const JOBS_DATA = [
       "Validating medical claim billing accuracy, resolving initial claim rejections, and denial follow-up",
       "Collaborating with US hospital billing workflows to accelerate revenue turnover"
     ],
-    applyUrl: "https://wa.me/918328246487?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20R1%20RCM%20Drive%20(TR1013)",
+    applyUrl: "https://wa.me/918309740722?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20R1%20RCM%20Drive%20(TR1013)",
     postedDate: "2026-08-31"
   },
   {
@@ -404,7 +404,7 @@ export const JOBS_DATA = [
       "Investigating claim status, coordinating documentation with providers, and expediting collections",
       "Documenting call notes and payment settlement terms accurately into PMS"
     ],
-    applyUrl: "https://wa.me/918328246487?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Ascent%20Health%20AR%20(TR1014)",
+    applyUrl: "https://wa.me/918309740722?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Ascent%20Health%20AR%20(TR1014)",
     postedDate: "2026-08-30"
   },
   {
@@ -435,7 +435,7 @@ export const JOBS_DATA = [
       "Reviewing explanation of benefits (EOB) and rectifying billing discrepancies with US insurance carriers",
       "Complying with HIPAA health information security standards"
     ],
-    applyUrl: "https://wa.me/918328246487?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Data%20Marshall%20Executive%20(TR1015)",
+    applyUrl: "https://wa.me/918309740722?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Data%20Marshall%20Executive%20(TR1015)",
     postedDate: "2026-08-29"
   },
   {
@@ -466,7 +466,7 @@ export const JOBS_DATA = [
       "Managing administrative coordination, patient eligibility verification, and revenue operations",
       "Ensuring rapid resolution of pending hospital claims"
     ],
-    applyUrl: "https://wa.me/918328246487?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20IKS%20Health%20Drive%20(TR1016)",
+    applyUrl: "https://wa.me/918309740722?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20IKS%20Health%20Drive%20(TR1016)",
     postedDate: "2026-08-28"
   },
   {
@@ -497,7 +497,7 @@ export const JOBS_DATA = [
       "Conduct performance appraisals, manage floor escalations, and drive process optimization initiatives",
       "Deliver weekly operational reports to client leadership"
     ],
-    applyUrl: "https://wa.me/918328246487?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20WNS%20Assistant%20Manager%20(TR1017)",
+    applyUrl: "https://wa.me/918309740722?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20WNS%20Assistant%20Manager%20(TR1017)",
     postedDate: "2026-08-27"
   },
   {
@@ -528,7 +528,7 @@ export const JOBS_DATA = [
       "Ensure strict adherence to digital safety, intellectual property, and community guidelines with high attention to detail",
       "Document pattern alerts for policy updates"
     ],
-    applyUrl: "https://wa.me/918328246487?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Concentrix%20Content%20Moderator%20(TR1018)",
+    applyUrl: "https://wa.me/918309740722?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Concentrix%20Content%20Moderator%20(TR1018)",
     postedDate: "2026-08-26"
   },
   {
@@ -559,7 +559,7 @@ export const JOBS_DATA = [
       "Verify passenger identification records and maintain high-accuracy customer travel itineraries",
       "Coordinate with global airline ground desks for clearance"
     ],
-    applyUrl: "https://wa.me/918328246487?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Teleperformance%20Travel%20Drive%20(TR1019)",
+    applyUrl: "https://wa.me/918309740722?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Teleperformance%20Travel%20Drive%20(TR1019)",
     postedDate: "2026-08-25"
   },
   {
@@ -590,7 +590,7 @@ export const JOBS_DATA = [
       "Direct Panel Management with 100% structured selections via single-round face-to-face (F2F) interview",
       "Conduct training refreshers for process updates"
     ],
-    applyUrl: "https://wa.me/918328246487?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Cognizant%20SME%20Mapping%20(TR1020)",
+    applyUrl: "https://wa.me/918309740722?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Cognizant%20SME%20Mapping%20(TR1020)",
     postedDate: "2026-08-24"
   },
   {
@@ -621,7 +621,7 @@ export const JOBS_DATA = [
       "Codebase Maintenance, Unit Testing, and Debugging",
       "Participate in agile sprint delivery and client technical demos"
     ],
-    applyUrl: "https://wa.me/918328246487?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Virtusa%202026%20Software%20Engineer%20Drive%20(TR1021)",
+    applyUrl: "https://wa.me/918309740722?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Virtusa%202026%20Software%20Engineer%20Drive%20(TR1021)",
     postedDate: "2026-09-10"
   },
   {
@@ -652,7 +652,7 @@ export const JOBS_DATA = [
       "Contribute to high-quality solutions, test frameworks, and quality engineering for global clients",
       "Collaborate with multi-disciplinary global consulting teams"
     ],
-    applyUrl: "https://wa.me/918328246487?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Deloitte%20Associate%20Analyst%20(TR1022)",
+    applyUrl: "https://wa.me/918309740722?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Deloitte%20Associate%20Analyst%20(TR1022)",
     postedDate: "2026-09-10"
   },
   {
@@ -683,7 +683,7 @@ export const JOBS_DATA = [
       "Adhere strictly to login & production hours (Total: 10:00 hrs, Production: 9:00 hrs, maintain punctuality & break schedules)",
       "Log accurate call notes and customer feedback"
     ],
-    applyUrl: "https://wa.me/918328246487?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Tech%20Mahindra%20Voice%20(TR1023)",
+    applyUrl: "https://wa.me/918309740722?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Tech%20Mahindra%20Voice%20(TR1023)",
     postedDate: "2026-09-19"
   },
   {
@@ -714,7 +714,7 @@ export const JOBS_DATA = [
       "Excellent verbal and written communication skills in English",
       "Maintain adherence to quality scorecards"
     ],
-    applyUrl: "https://wa.me/918328246487?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Teleperformance%2010%20Days%20Process%20(TR1024)",
+    applyUrl: "https://wa.me/918309740722?text=Hi%20Sandru%20Anudeep,%20I%20am%20interested%20in%20Teleperformance%2010%20Days%20Process%20(TR1024)",
     postedDate: "2026-09-19"
   }
 ];
