@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 48" fill="none">
+  <!-- Wipro Dot Cluster -->
+  <g transform="translate(6, 12)">
+    <circle cx="8" cy="8" r="3.5" fill="#EF3340"/>
+    <circle cx="16" cy="8" r="3.5" fill="#0082CA"/>
+    <circle cx="8" cy="16" r="3.5" fill="#43B02A"/>
+    <circle cx="16" cy="16" r="3.5" fill="#722282"/>
+  </g>
+  <!-- Wipro Wordmark -->
+  <text x="34" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#2D2926" letter-spacing="-0.5">wipro</text>
+</svg>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 48" fill="none">
+  <path d="M26.4 14.8C24.1 12.2 20.8 10.7 17.1 10.7C9.9 10.7 4 16.6 4 23.8C4 31 9.9 36.9 17.1 36.9C21 36.9 24.3 35.2 26.6 32.4L23.4 29.8C21.8 31.8 19.6 33 17.1 33C12.1 33 8 28.9 8 23.8C8 18.7 12.1 14.6 17.1 14.6C19.7 14.6 21.9 15.7 23.3 17.5L26.4 14.8Z" fill="#000048"/>
+  <circle cx="28" cy="11" r="3.2" fill="#0033A0"/>
+  <text x="36" y="29" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#000048" letter-spacing="-0.5">cognizant</text>
+</svg>

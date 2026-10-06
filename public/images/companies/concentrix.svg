@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 48" fill="none">
+  <!-- Concentrix Arc Emblem -->
+  <g transform="translate(6, 12)">
+    <path d="M12 2A10 10 0 0 1 22 12A10 10 0 0 1 12 22" stroke="#009CDE" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <path d="M7 6A6 6 0 0 1 13 12A6 6 0 0 1 7 18" stroke="#002D62" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="2" cy="12" r="2.5" fill="#009CDE"/>
+  </g>
+  <!-- Concentrix Text -->
+  <text x="36" y="29" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="900" fill="#002D62" letter-spacing="1">CONCENTRIX</text>
+</svg>

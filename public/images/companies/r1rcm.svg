@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 48" fill="none">
+  <!-- R1 Monogram Badge -->
+  <rect x="4" y="8" width="34" height="32" rx="6" fill="#002855"/>
+  <text x="10" y="31" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="900" fill="#00A3E0" letter-spacing="-1">R</text>
+  <text x="24" y="31" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="900" fill="#FFFFFF" letter-spacing="-1">1</text>
+  <!-- RCM Text -->
+  <text x="46" y="31" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" fill="#002855" letter-spacing="1">RCM</text>
+</svg>
