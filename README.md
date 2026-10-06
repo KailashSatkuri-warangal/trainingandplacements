@@ -151,16 +151,7 @@ Supabase PostgreSQL (`jobs` table)
 React Frontend (Real-time live drives & filters)
 ```
 
-### Environment Variables (`.env`)
-```env
-# Supabase PostgreSQL Configuration
-VITE_SUPABASE_URL=https://sbwantnhvsiylfnmayfb.supabase.co
-VITE_SUPABASE_ANON_KEY=sb_publishable_66MIYiu8PkEETc78CGU2JQ_PQRIkdrk
 
-# SSR / Next.js interoperability
-NEXT_PUBLIC_SUPABASE_URL=https://sbwantnhvsiylfnmayfb.supabase.co
-NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=sb_publishable_66MIYiu8PkEETc78CGU2JQ_PQRIkdrk
-```
 
 ### Recruiter Admin Panel (`/admin`)
 - Accessible at `/admin` (also linked in Navbar and Footer).
