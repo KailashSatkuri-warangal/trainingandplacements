@@ -47,16 +47,16 @@ export function Stats() {
       className="py-16 md:py-24 border-b border-[#e6e6df] bg-white relative"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 divide-y sm:divide-y-0 sm:divide-x divide-[#e6e6df]">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-0 lg:divide-x divide-[#e6e6df]">
           {STATS_DATA.map((item, index) => (
             <div
               key={index}
               className={`flex flex-col justify-between ${
-                index === 0 ? "sm:pl-0 sm:pr-8" : "sm:px-8 pt-6 sm:pt-0"
-              }`}
+                index === 0 ? "lg:pl-0 lg:pr-8" : "lg:px-8"
+              } p-4 sm:p-0 bg-neutral-50/50 sm:bg-transparent rounded-2xl sm:rounded-none border sm:border-0 border-[#e6e6df]/60`}
             >
               <div>
-                <div className="flex items-baseline text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#111318]">
+                <div className="flex items-baseline text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#111318]">
                   <span
                     className="counter-value font-display"
                     data-target={item.numeric}

@@ -34,7 +34,7 @@ export default function Footer() {
             <div className="p-4 rounded-xl bg-white/5 border border-white/10 space-y-1.5">
               <div className="flex items-center space-x-1.5 text-xs font-semibold text-emerald-400 uppercase tracking-wider">
                 <ShieldCheck className="w-4 h-4" />
-                <span>Executive Leadership</span>
+                <span>Candidate Placement Desk</span>
               </div>
               <p className="text-sm font-bold text-white">{SITE_CONFIG.founder}</p>
               <p className="text-xs text-neutral-400">
@@ -157,7 +157,7 @@ export default function Footer() {
                   className="w-full inline-flex items-center justify-center space-x-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-2.5 px-4 rounded-xl text-xs transition-colors"
                 >
                   <MessageSquare className="w-3.5 h-3.5" />
-                  <span>Chat with {SITE_CONFIG.founder}</span>
+                  <span>Chat with Contact Team</span>
                 </a>
               </div>
             </div>

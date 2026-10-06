@@ -83,7 +83,7 @@ export default function ContactForm({ defaultType = "Candidate" }) {
   };
 
   return (
-    <div className="bg-white rounded-3xl border border-[#e6e6df] p-6 sm:p-10 shadow-sm">
+    <div className="bg-white rounded-3xl border border-[#e6e6df] p-5 sm:p-10 shadow-sm">
       {status === "success" ? (
         <div className="py-10 text-center space-y-4">
           <div className="w-14 h-14 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto">

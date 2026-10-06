@@ -114,12 +114,12 @@ export default function Hero() {
             data-cursor-label="WHATSAPP"
           >
             <MessageSquare className="w-4 h-4 text-emerald-600" />
-            <span>Direct WhatsApp to {SITE_CONFIG.founder}</span>
+            <span>Chat with Contact Team on WhatsApp</span>
           </a>
         </div>
 
         {/* Floating/Curated Client Badges preview */}
-        <div className="hero-badges mt-14 grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div className="hero-badges mt-10 sm:mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
           <div className="bg-white/80 backdrop-blur-sm border border-[#e6e6df] rounded-xl p-3.5 transition-all hover:border-teal-600/50 hover:shadow-sm">
             <div className="flex items-center justify-between text-[11px] font-bold text-teal-800 uppercase tracking-wider mb-1">
               <span>Capgemini</span>

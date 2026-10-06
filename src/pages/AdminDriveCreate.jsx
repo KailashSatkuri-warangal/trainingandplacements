@@ -380,12 +380,12 @@ export default function AdminDriveCreate() {
           </div>
 
           {/* Actions */}
-          <div className="pt-6 border-t border-[#e6e6df] flex items-center justify-end space-x-3">
+          <div className="pt-6 border-t border-[#e6e6df] flex flex-col-reverse sm:flex-row sm:items-center sm:justify-end gap-3">
             <button
               type="button"
               disabled={loading}
               onClick={() => handleSubmit("DRAFT")}
-              className="px-5 py-3 border border-neutral-300 rounded-xl font-semibold text-neutral-700 hover:bg-neutral-50 transition-colors"
+              className="w-full sm:w-auto px-5 py-3 border border-neutral-300 rounded-xl font-semibold text-neutral-700 hover:bg-neutral-50 transition-colors text-center"
             >
               Save as Draft
             </button>
@@ -393,7 +393,7 @@ export default function AdminDriveCreate() {
             <button
               type="submit"
               disabled={loading}
-              className="px-6 py-3 bg-[#111318] hover:bg-teal-800 text-white rounded-xl font-bold transition-all shadow-sm"
+              className="w-full sm:w-auto px-6 py-3 bg-[#111318] hover:bg-teal-800 text-white rounded-xl font-bold transition-all shadow-sm text-center"
             >
               {loading ? "Publishing to Supabase..." : "Publish Live Drive"}
             </button>

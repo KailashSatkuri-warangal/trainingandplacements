@@ -77,6 +77,7 @@ export default function PhoneNotificationCenter() {
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: "100%", opacity: 0.5 }}
           transition={{ type: "spring", damping: 26, stiffness: 280 }}
+          data-lenis-prevent="true"
           className="relative w-full max-w-md bg-[#0d1017] text-white h-full shadow-2xl flex flex-col border-l border-white/10 z-10"
         >
           {/* Header */}

@@ -117,8 +117,8 @@ export default function AdminApplications() {
 
       {/* Applications Table */}
       <div className="bg-white rounded-2xl border border-[#e6e6df] overflow-hidden shadow-xs">
-        <div className="overflow-x-auto">
-          <table className="w-full text-left text-xs">
+        <div className="overflow-x-auto" data-lenis-prevent="true">
+          <table className="w-full min-w-[720px] text-left text-xs">
             <thead className="bg-[#fbfbf9] border-b border-[#e6e6df] text-neutral-500 uppercase tracking-wider text-[10px]">
               <tr>
                 <th className="py-3.5 px-4">Candidate</th>

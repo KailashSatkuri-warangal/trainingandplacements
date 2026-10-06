@@ -23,7 +23,7 @@ export default function About() {
       <section className="py-16 bg-white border-y border-[#e6e6df] mb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-5 bg-[#fbfbf9] rounded-3xl border border-[#e6e6df] p-8 sm:p-10 text-center relative overflow-hidden">
+            <div className="lg:col-span-5 bg-[#fbfbf9] rounded-3xl border border-[#e6e6df] p-6 sm:p-10 text-center relative overflow-hidden">
               <div className="w-24 h-24 rounded-full bg-teal-800 text-white font-bold text-xl flex items-center justify-center mx-auto mb-6 shadow-md">
                 <Users className="w-10 h-10" />
               </div>

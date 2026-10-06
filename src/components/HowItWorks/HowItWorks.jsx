@@ -22,10 +22,10 @@ export default function HowItWorks() {
             <div className="mt-8 p-5 bg-[#fbfbf9] rounded-2xl border border-[#e6e6df] space-y-3">
               <div className="flex items-center space-x-2 text-xs font-bold text-teal-800 uppercase tracking-wider">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                <span>Founder-Supervised Placement</span>
+                <span>Dedicated Placement Supervision</span>
               </div>
               <p className="text-xs text-[#6b7280]">
-                Every screening schedule is directly monitored by {SITE_CONFIG.founder} to ensure candidates are fully prepared before meeting client hiring panels.
+                Every screening schedule is directly monitored by our {SITE_CONFIG.founder} to ensure candidates are fully prepared before meeting client hiring panels.
               </p>
               <a
                 href={SITE_CONFIG.whatsappUrl}
@@ -49,7 +49,7 @@ export default function HowItWorks() {
                 <div
                   key={step.step}
                   onClick={() => setActiveStep(index)}
-                  className={`p-6 sm:p-8 rounded-2xl border transition-all duration-300 cursor-pointer ${
+                  className={`p-5 sm:p-8 rounded-2xl border transition-all duration-300 cursor-pointer ${
                     isActive
                       ? "bg-[#fbfbf9] border-teal-700 shadow-md ring-1 ring-teal-700/20"
                       : "bg-white border-[#e6e6df] hover:border-neutral-400"

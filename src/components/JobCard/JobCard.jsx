@@ -17,7 +17,7 @@ export default function JobCard({ job }) {
 
   return (
     <div
-      className="group bg-white rounded-2xl border border-[#e6e6df] p-6 flex flex-col justify-between transition-all duration-300 hover:border-teal-700 hover:shadow-lg hover:-translate-y-1 relative"
+      className="group bg-white rounded-2xl border border-[#e6e6df] p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 hover:border-teal-700 hover:shadow-lg hover:-translate-y-1 relative"
       data-cursor
       data-cursor-label="VIEW"
     >

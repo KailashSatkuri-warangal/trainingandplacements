@@ -61,7 +61,7 @@ export default function MobileMenu({ isOpen, onClose, navLinks }) {
             <ShieldCheck className="w-4 h-4" />
             <span>Direct Recruiter Desk</span>
           </div>
-          <p className="text-sm font-medium text-white">{SITE_CONFIG.founder} (Founder & CEO)</p>
+          <p className="text-sm font-medium text-white">{SITE_CONFIG.founder} ({SITE_CONFIG.founderTitle})</p>
           <p className="text-xs text-neutral-400 flex items-center space-x-1.5">
             <MapPin className="w-3.5 h-3.5 text-neutral-500" />
             <span>Hyderabad, Telangana • Direct Line: {SITE_CONFIG.directLine}</span>
@@ -76,7 +76,7 @@ export default function MobileMenu({ isOpen, onClose, navLinks }) {
             className="w-full flex items-center justify-center space-x-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-3 px-4 rounded-xl text-sm transition-colors"
           >
             <MessageSquare className="w-4 h-4" />
-            <span>Direct WhatsApp to {SITE_CONFIG.founder}</span>
+            <span>Chat on WhatsApp Directly</span>
           </a>
 
           <Link

@@ -148,8 +148,8 @@ export default function AdminEnquiries() {
         </div>
       ) : (
         <div className="bg-white rounded-2xl border border-neutral-200 overflow-hidden shadow-xs">
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-xs">
+          <div className="overflow-x-auto" data-lenis-prevent="true">
+            <table className="w-full min-w-[680px] text-left text-xs">
               <thead className="bg-neutral-50 border-b border-neutral-200 text-neutral-500 font-bold uppercase tracking-wider">
                 <tr>
                   <th className="py-3 px-4">Sender</th>

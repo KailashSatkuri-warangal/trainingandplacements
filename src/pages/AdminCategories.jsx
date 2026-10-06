@@ -99,8 +99,8 @@ export default function AdminCategories() {
       </div>
 
       <div className="bg-white rounded-2xl border border-[#e6e6df] overflow-hidden shadow-xs">
-        <div className="overflow-x-auto">
-          <table className="w-full text-left text-xs">
+        <div className="overflow-x-auto" data-lenis-prevent="true">
+          <table className="w-full min-w-[600px] text-left text-xs">
             <thead className="bg-[#fbfbf9] border-b border-[#e6e6df] text-neutral-500 uppercase tracking-wider text-[10px]">
               <tr>
                 <th className="py-3.5 px-4">Category Name</th>
@@ -151,8 +151,8 @@ export default function AdminCategories() {
       </div>
 
       {showModal && (
-        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-white rounded-3xl border border-[#e6e6df] max-w-md w-full p-6 sm:p-8 space-y-4 shadow-xl">
+        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4" data-lenis-prevent="true">
+          <div className="bg-white rounded-3xl border border-[#e6e6df] max-w-md w-full p-6 sm:p-8 space-y-4 shadow-xl max-h-[90vh] overflow-y-auto" data-lenis-prevent="true">
             <h3 className="text-lg font-bold text-[#111318]">
               {editingCat ? "Edit Category" : "Add Category"}
             </h3>

@@ -190,7 +190,7 @@ export default function AdminLayout() {
 
       {/* Mobile Drawer */}
       {mobileSidebarOpen && (
-        <div className="md:hidden fixed inset-0 top-[57px] z-30 bg-[#0e1117] text-white p-6 space-y-6 overflow-y-auto">
+        <div className="md:hidden fixed inset-0 top-[57px] z-30 bg-[#0e1117] text-white p-6 space-y-6 overflow-y-auto" data-lenis-prevent="true">
           <div className="p-3 bg-white/5 rounded-xl border border-white/10 text-xs">
             <span className="text-[10px] text-emerald-400 font-bold uppercase tracking-wider block">
               Logged in as {profile?.role || "ADMIN"}

@@ -21,7 +21,7 @@ export default function WhyChooseUs() {
           {WHY_CHOOSE_US_ITEMS.map((item) => (
             <div
               key={item.number}
-              className="group bg-white rounded-2xl border border-[#e6e6df] p-8 flex flex-col justify-between transition-all duration-300 hover:border-teal-700 hover:shadow-lg hover:-translate-y-1"
+              className="group bg-white rounded-2xl border border-[#e6e6df] p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:border-teal-700 hover:shadow-lg hover:-translate-y-1"
               data-cursor
               data-cursor-label="ADVANTAGE"
             >
